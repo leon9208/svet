@@ -6,22 +6,10 @@
 	"favicon":"img/favicons/favicon",
 	"body-class": ''
 })
-
 <main class="main">
 	@@include('components/page-blocks/_hero.html')
-	<div class="container">
-		<div class="border p-3 w-100"></div>
-		<div class="row">
-			<div class="col-auto">
-				<button class="btn btn-primary">Button</button>
-			</div>
-			<div class="col-auto">
-				<a href="#" class="btn btn-white">Button</a>
-			</div>
-			<div class="col-auto">
-				<a href="#" class="btn btn-dark">Button</a>
-			</div>
-		</div>
-	</div>
+	@@include('components/page-blocks/_advantages.html')
+	@@include('components/page-blocks/_collections.html')
+	@@include('components/page-blocks/_subscribe.html')
 </main>
 @@include('components/page-blocks/_footer.html')
