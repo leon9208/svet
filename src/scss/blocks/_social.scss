@@ -1,0 +1,18 @@
+.social {
+	display: flex;
+	gap: 10px;
+	&-item {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--bs-dark);
+		height: 40px;
+		width: 40px;
+		border-radius: 0.5rem;
+		transition: var(--bs-transition);
+		&:hover {
+			background-color: var(--bs-primary);
+		}
+	}
+}
