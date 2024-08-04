@@ -1,0 +1,102 @@
+h2, .h2 {
+	font-size: 22px;
+	@include from-sm() { font-size: 40px; }
+}
+
+p, blockquote {
+	line-height: 1.8;
+}
+
+
+.fw {
+	&-semibold { font-weight: 600 !important; }
+	&-bolder { font-weight: 800 !important; }
+	&-black { font-weight: 900 !important; }
+}
+.position {
+	&-xs { @include from-xs() { &-absolute { position: absolute; } } }
+	&-sm { @include from-sm() { &-absolute { position: absolute; } } }
+	&-md { @include from-md() { &-absolute { position: absolute; } } }
+	&-lg { @include from-lg() { &-absolute { position: absolute; } } }
+	&-xl { @include from-xl() { &-absolute { position: absolute; } } }
+}
+
+.fs {
+    &-7 { font-size: 14px !important; }
+    &-8 { font-size: 12px !important; }
+    &-xs {
+        @include from-xs() {
+            &-1 { font-size: 2.5rem !important; }
+            &-2 { font-size: 2rem !important; }
+            &-3 { font-size: 1.75rem !important; }
+            &-4 { font-size: 1.5rem !important; }
+            &-5 { font-size: 1.25rem !important; }
+            &-6 { font-size: 1rem !important; }
+            &-7 { font-size: 14px !important; }
+            &-8 { font-size: 12px !important; }
+        }
+    }
+    &-sm {
+        @include from-sm() {
+            &-1 { font-size: 2.5rem !important; }
+            &-2 { font-size: 2rem !important; }
+            &-3 { font-size: 1.75rem !important; }
+            &-4 { font-size: 1.5rem !important; }
+            &-5 { font-size: 1.25rem !important; }
+            &-6 { font-size: 1rem !important; }
+            &-7 { font-size: 14px !important; }
+            &-8 { font-size: 12px !important; }
+        }
+    }
+    &-md {
+        @include from-md() {
+            &-1 { font-size: 2.5rem !important; }
+            &-2 { font-size: 2rem !important; }
+            &-3 { font-size: 1.75rem !important; }
+            &-4 { font-size: 1.5rem !important; }
+            &-5 { font-size: 1.25rem !important; }
+            &-6 { font-size: 1rem !important; }
+            &-7 { font-size: 14px !important; }
+            &-8 { font-size: 12px !important; }
+        }
+    }
+    &-lg {
+        @include from-lg() {
+            &-1 { font-size: 2.5rem !important; }
+            &-2 { font-size: 2rem !important; }
+            &-3 { font-size: 1.75rem !important; }
+            &-4 { font-size: 1.5rem !important; }
+            &-5 { font-size: 1.25rem !important; }
+            &-6 { font-size: 1rem !important; }
+            &-7 { font-size: 14px !important; }
+            &-8 { font-size: 12px !important; }
+        }
+    }
+    &-xl {
+        @include from-xl() {
+            &-1 { font-size: 2.5rem !important; }
+            &-2 { font-size: 2rem !important; }
+            &-3 { font-size: 1.75rem !important; }
+            &-4 { font-size: 1.5rem !important; }
+            &-5 { font-size: 1.25rem !important; }
+            &-6 { font-size: 1rem !important; }
+            &-7 { font-size: 14px !important; }
+            &-8 { font-size: 12px !important; }
+        }
+    }
+}
+
+.text {
+    &-sm {
+        @include from-sm() {
+            &-white {
+                --bs-text-opacity: 1;
+                color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+            }
+            &-primary {
+                --bs-text-opacity: 1;
+                color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+            }
+        }
+    }
+}
