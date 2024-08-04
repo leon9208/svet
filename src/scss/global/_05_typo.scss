@@ -6,20 +6,21 @@ h5, .h5,
 h6, .h6 { font-weight: 400; }
 
 h2, .h2 {
-	@include from-sm() { font-size: 28px; }
-	@include from-md() { font-size: 34px; }
-	@include from-lg() { font-size: 44px; }
-	@include from-xl() { font-size: 54px; }
+    font-size: 32px;
+    @include from-sm() { font-size: 36px; }
+    @include from-md() { font-size: 40px; }
+    @include from-lg() { font-size: 48px; }
+    @include from-xl() { font-size: 54px; }
 }
 
 p, blockquote {
-	line-height: 1.8;
+    line-height: 1.8;
 }
 
 .fw {
-	&-semibold { font-weight: 600 !important; }
-	&-bolder { font-weight: 800 !important; }
-	&-black { font-weight: 900 !important; }
+    &-semibold { font-weight: 600 !important; }
+    &-bolder { font-weight: 800 !important; }
+    &-black { font-weight: 900 !important; }
 }
 
 .fs {
