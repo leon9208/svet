@@ -1,52 +1,55 @@
 <section class="section collections">
 	<div class="container">
 		<h2 class="mb-4 mb-sm-5">Коллекции</h2>
-		<div class="row row-gap-4 justify-content-center">
-			<div class="col-sm-6 col-lg-4">
-				<div class="collection-card">
-					<div class="collection-card__img">
-						@@include('../bem-blocks/_jpg.html', {
-							'img': 'collection-img-1',
-							'height': '440',
-							'width': '374',
-							'class': '',
-						})
-					</div>
-					<div class="collection-card__content">
-						<h3>Преобразить летний сад или веранду</h3>
-						<a href="#" class="btn btn-primary">Смотреть примеры</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<div class="collection-card">
-					<div class="collection-card__img">
-						@@include('../bem-blocks/_jpg.html', {
-							'img': 'collection-img-2',
-							'height': '440',
-							'width': '374',
-							'class': '',
-						})
-					</div>
-					<div class="collection-card__content">
-						<h3>Обустроить рабочее пространство</h3>
-						<a href="#" class="btn btn-white">Смотреть примеры</a>
+
+		<div class="swiper collections-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="collection-card">
+						<div class="collection-card__img">
+							@@include('../bem-blocks/_jpg.html', {
+								'img': 'collection-img-1',
+								'height': '440',
+								'width': '374',
+								'class': '',
+							})
+						</div>
+						<div class="collection-card__content">
+							<h3>Преобразить летний сад или веранду</h3>
+							<a href="#" class="btn btn-white">Смотреть примеры</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<div class="collection-card">
-					<div class="collection-card__img">
-						@@include('../bem-blocks/_jpg.html', {
-							'img': 'collection-img-3',
-							'height': '440',
-							'width': '374',
-							'class': '',
-						})
+				<div class="swiper-slide">
+					<div class="collection-card">
+						<div class="collection-card__img">
+							@@include('../bem-blocks/_jpg.html', {
+								'img': 'collection-img-2',
+								'height': '440',
+								'width': '374',
+								'class': '',
+							})
+						</div>
+						<div class="collection-card__content">
+							<h3>Обустроить рабочее пространство</h3>
+							<a href="#" class="btn btn-white">Смотреть примеры</a>
+						</div>
 					</div>
-					<div class="collection-card__content">
-						<h3>Украсить игровую зону</h3>
-						<a href="#" class="btn btn-white">Смотреть примеры</a>
+				</div>
+				<div class="swiper-slide">
+					<div class="collection-card">
+						<div class="collection-card__img">
+							@@include('../bem-blocks/_jpg.html', {
+								'img': 'collection-img-3',
+								'height': '440',
+								'width': '374',
+								'class': '',
+							})
+						</div>
+						<div class="collection-card__content">
+							<h3>Украсить <br>игровую зону</h3>
+							<a href="#" class="btn btn-white">Смотреть примеры</a>
+						</div>
 					</div>
 				</div>
 			</div>
