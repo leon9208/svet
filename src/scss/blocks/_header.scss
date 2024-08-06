@@ -1,3 +1,33 @@
 .header {
-	
+	background-color: var(--bs-black);
+	padding: 20px 0;
+	@include from-xs() {
+		padding: 22px 0;
+	}
+	&__logo {
+		@include xs() {
+			display: inline-flex;
+			max-width: 82px;
+		}
+	}
+	&-cart {
+		position: relative;
+		margin-right: 10px;
+		&::after {
+			content: attr(data-count);
+			position: absolute;
+			height: 22px;
+			width: 22px;
+			bottom: 7px;
+			left: 15px;
+			line-height: 22px;
+			color: var(--bs-black);
+			background-color: var(--bs-white);
+			text-align: center;
+			user-select: none;
+			pointer-events: none;
+			border-radius: 50px;
+			font-size: 12px;
+		}
+	}
 }

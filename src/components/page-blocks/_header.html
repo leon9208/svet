@@ -1,23 +1,41 @@
 <header class="header">
 	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-auto d-none d-sm-block">
-				<a href="/" class="logo">
-					LOSEVA<span>FIT</span>
+		<div class="row align-items-center justify-content-between">
+			<div class="col-auto">
+				<a href="/" class="logo header__logo">
+					<img src="img/logo.svg" alt="" class="img-fluid" width="130">
 				</a>
 			</div>
-			<div class="col-auto ms-auto">
+			<div class="col-auto">
 				@@include('_nav.html')
 			</div>
 			<div class="col-auto">
-				<button class="nav-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive">
-					<!-- @@include('../bem-blocks/_sprite.html', {
-						'id': 'menu-btn',
-						'class': '',
-						'height': '24',
-						'width': '24',
-					}) -->
-				</button>
+				<div class="d-flex gap-4 align-items-end">
+					<a href="#" class="nav-link">
+						@@include('../bem-blocks/_sprite.html', {
+							'id': 'user',
+							'class': '',
+							'height': '22',
+							'width': '22',
+						})
+					</a>
+					<a href="#" class="nav-link header-cart" data-count="0">
+						@@include('../bem-blocks/_sprite.html', {
+							'id': 'cart',
+							'class': '',
+							'height': '22',
+							'width': '22',
+						})
+					</a>
+					<button class="btn-none d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive">
+						@@include('../bem-blocks/_sprite.html', {
+							'id': 'menu',
+							'class': '',
+							'height': '32',
+							'width': '32',
+						})
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
