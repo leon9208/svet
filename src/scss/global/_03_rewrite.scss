@@ -61,20 +61,22 @@
 	gap: 0.5em;
 	user-select: none;
 	outline: none;
-	transition: color .25s ease, background 0.25s ease;
+	transition: color .25s ease, box-shadow .25s ease, background-color 0.25s ease;
 	@include from-md() {
 		--bs-btn-font-size: 20px;
 	}
-	&:hover {
-		box-shadow: 0 .3rem 1rem rgba(var(--bs-primary-rgb), 0.5);
-	}
+	// &:hover {
+	// 	box-shadow: 0 .3rem 1rem rgba(var(--bs-primary-rgb), 0.5);
+	// }
 	&-white {
 		--bs-btn-bg: var(--bs-white);
-		--bs-btn-active-bg: var(--bs-white);
-		--bs-btn-hover-bg: var(--bs-white);
+		--bs-btn-hover-bg: var(--bs-primary);
+		--bs-btn-active-bg: var(--bs-btn-hover-bg);
 		--bs-btn-color: var(--bs-black);
-		--bs-btn-hover-color: var(--bs-black);
-		--bs-btn-active-color: var(--bs-black);
+		--bs-btn-hover-color: var(--bs-white);
+		--bs-btn-active-color: var(--bs-btn-hover-color);
+		--bs-btn-disabled-color: var(--bs-btn-color);
+		--bs-btn-disabled-bg: var(--bs-btn-bg);
 	}
 	&-primary {
 		--bs-btn-bg: var(--bs-primary);
@@ -91,6 +93,14 @@
 		--bs-btn-color: var(--bs-white);
 		--bs-btn-hover-color: var(--bs-white);
 		--bs-btn-active-color: var(--bs-white);
+	}
+	&-none {
+		display: inline-flex;
+		outline: none;
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		margin: 0;
 	}
 }
 
