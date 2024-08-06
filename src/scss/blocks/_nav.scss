@@ -1,3 +1,12 @@
 .nav {
-
+	&-link {
+		--bs-nav-link-font-weight: 400;
+		--bs-nav-link-color: var(--bs-white);
+		--bs-nav-link-hover-color: var(--bs-primary);
+		--bs-navbar-active-color: var(--bs-primary);
+		transition: all .15s ease-in-out;
+		&.active {
+			--bs-nav-link-font-weight: 700;
+		}
+	}
 }
