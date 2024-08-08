@@ -225,3 +225,33 @@
 		}
 	}
 }
+
+.text-ticker {
+	position: relative;
+	padding: 12px 0;
+	overflow: hidden;
+	width: 100%;
+	&__content {
+		--speed: 10s;
+		display: flex;
+		gap: 2rem;
+		white-space: nowrap;
+		font-size: 1rem;
+		will-change: transform;
+		animation: text var(--speed) linear infinite;
+		@include from-xs() {
+			--speed: 40s;
+			font-size: 1.25rem;
+		}
+	}
+}
+
+@keyframes text {
+	from {
+		transform: translateX(0%);
+	 }
+	 /* Magic is here. This is the width of the elem with text after rendering the page */
+	 to {
+		transform: translateX(-160%);
+	 }
+  }
