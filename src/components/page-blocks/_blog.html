@@ -1,0 +1,69 @@
+<section class="section blog-section">
+	<div class="container">
+		<div class="d-flex justify-content-between align-items-sm-center flex-column row-gap-4 flex-sm-row mb-4 mb-sm-5">
+			<h2 class="m-0">Блог</h2>
+			<a href="#" class="d-flex align-items-center text-decoration-none fs-6 fs-sm-5">
+				<span>Все статьи</span>
+				@@include('../bem-blocks/_sprite.html', {
+					'id': 'arr-right',
+					'height': '20',
+					'width': '20',
+					'class': '',
+				})
+			</a>
+		</div>
+
+		<div class="swiper blog-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="#" class="blog-card">
+						<div class="blog-card__img">
+							@@include('../bem-blocks/_jpg.html', {
+								'img': 'blog-img-1',
+								'height': '185',
+								'width': '374',
+								'class': '',
+							})
+						</div>
+						<div class="blog-card__content">
+							<span class="blog-card__category">Outdoor</span>
+							<p class="blog-card__text">The ultimate guide to decorating outdoor summer parties with smart lighting</p>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#" class="blog-card">
+						<div class="blog-card__img">
+							@@include('../bem-blocks/_jpg.html', {
+								'img': 'blog-img-2',
+								'height': '185',
+								'width': '374',
+								'class': '',
+							})
+						</div>
+						<div class="blog-card__content">
+							<span class="blog-card__category">Home Decor</span>
+							<p class="blog-card__text">The ultimate guide to decorating outdoor summer parties with smart lighting smart lighting</p>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#" class="blog-card">
+						<div class="blog-card__img">
+							@@include('../bem-blocks/_jpg.html', {
+								'img': 'blog-img-3',
+								'height': '185',
+								'width': '374',
+								'class': '',
+							})
+						</div>
+						<div class="blog-card__content">
+							<span class="blog-card__category">Home Decor</span>
+							<p class="blog-card__text">The ultimate guide to decorating outdoor summer parties with smart lighting</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
