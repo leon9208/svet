@@ -4,13 +4,7 @@ body {
 	@include xs() { --bs-body-font-size: 14px; }
 }
 
-svg {
-	flex: none;
-}
-
-.no-btn {
-	@include no-btn ("inline-flex")
-}
+svg { flex: none; }
 
 .section {
 	position: relative;
