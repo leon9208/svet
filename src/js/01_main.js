@@ -71,3 +71,39 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 		}
 	}
 });
+
+var storiesSlider = new Swiper(".stories-slider", {
+	effect: "coverflow",
+	grabCursor: true,
+	centeredSlides: true,
+	slidesPerView: 'auto',
+	centerMode: true,
+	loop: false,
+	initialSlide: 2,
+	navigation: {
+		nextEl: '.stories-slider .swiper-button-next',
+		prevEl: '.stories-slider .swiper-button-prev',
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
+	},
+	coverflowEffect: {
+		rotate: 0,
+		stretch: 0,
+		depth: 100,
+		modifier: 2,
+		slideShadows: false,
+		stretch: 0
+	},
+	breakpoints: {
+		0: {
+			pagination: { enabled: true },
+			navigation: { enabled: false },
+		},
+		1201: {
+			pagination: { enabled: false },
+			navigation: { enabled: true },
+		}
+	}
+});
