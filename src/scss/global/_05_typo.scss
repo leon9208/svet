@@ -5,6 +5,14 @@ h4, .h4,
 h5, .h5,
 h6, .h6 { font-weight: 400; }
 
+h1, .h1 {
+    font-size: 38px;
+    @include from-sm() { font-size: 40px; }
+    @include from-md() { font-size: 48px; }
+    @include from-lg() { font-size: 54px; }
+    @include from-xl() { font-size: 74px; }
+}
+
 h2, .h2 {
     font-size: 32px;
     @include from-sm() { font-size: 36px; }
