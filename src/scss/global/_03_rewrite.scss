@@ -201,11 +201,6 @@
 }
 
 .swiper {
-	&-pagination {
-		bottom: unset;
-		margin-top: 24px;
-		position: relative;
-	}
 	&-button {
 		&-prev, &-next {
 			padding: 0;
