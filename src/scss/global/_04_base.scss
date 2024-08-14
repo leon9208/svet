@@ -13,4 +13,8 @@ svg { flex: none; }
 	background-position: center;
 	padding: 40px 0;
 	@include from-md() { padding: 50px 0 ; }
+	&-headline {
+		margin-bottom: 40px;
+		@include from-md() { margin-bottom: 50px; }
+	}
 }
