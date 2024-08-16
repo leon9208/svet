@@ -89,7 +89,6 @@
 		.advantage {
 			&-item {
 				align-items: flex-start;
-				// justify-content: flex-end;
 			}
 			&-content {
 				@include from-lg() {
@@ -99,7 +98,6 @@
 			&-image {
 				margin-top: auto;
 				bottom: 0;
-				padding: 0 15px 15px;
 				@include from-lg() {
 					margin-left: auto;
 					width: 75%;
