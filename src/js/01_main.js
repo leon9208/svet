@@ -85,7 +85,7 @@ var storiesSlider = new Swiper(".stories-slider", {
 		prevEl: '.stories-slider .swiper-button-prev',
 	},
 	pagination: {
-		el: '.swiper-pagination',
+		el: '.stories-slider .swiper-pagination',
 		type: 'bullets',
 	},
 	coverflowEffect: {
@@ -105,5 +105,19 @@ var storiesSlider = new Swiper(".stories-slider", {
 			pagination: { enabled: false },
 			navigation: { enabled: true },
 		}
+	}
+});
+
+var productSlider = new Swiper(".product-slider", {
+	slidesPerView: 1,
+	loop: false,
+	// init: false,
+	pagination: {
+		el: '.product-slider .swiper-pagination',
+		type: 'bullets',
+	},
+	breakpoints: {
+		0: { enabled: true },
+		767: { enabled: false }
 	}
 });

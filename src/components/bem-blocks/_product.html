@@ -1,0 +1,54 @@
+<div class="product">
+	<div class="product-body">
+		@@if(badge) {
+			<div class="product-badge">
+				<div class="product-badge__icon">
+					@@include('_sprite.html', {
+						'id': 'plus-icon',
+						'class': '',
+						'height': '11',
+						'width': '34',
+					})
+				</div>
+				<div class="product-badge__text">Plus</div>
+			</div>
+		}
+		<button class="product-btn"></button>
+		<div class="product-img">
+			<div class="product-img__front">
+				@@include('_png.html', {
+					'img': 'product-box',
+					'class': '',
+					'height': '',
+					'width': '',
+				})
+			</div>
+			<div class="product-img__back">
+				@@include('_jpg.html', {
+					'img': 'product-img',
+					'class': '',
+					'height': '',
+					'width': '',
+				})
+			</div>
+		</div>
+		<div class="swiper product-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					@@include('_png.html', { 'img': 'product-box', 'class': '', 'height': '', 'width': '', })
+				</div>
+				<div class="swiper-slide">
+					@@include('_png.html', { 'img': 'product-box', 'class': '', 'height': '', 'width': '', })
+				</div>
+				<div class="swiper-slide">
+					@@include('_png.html', { 'img': 'product-box', 'class': '', 'height': '', 'width': '', })
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="product-footer">
+		<a href="#" class="product-name">Flex (Multicolor edition)</a>
+		<div class="product-price">от 7 900 ₽</div>
+	</div>
+</div>
