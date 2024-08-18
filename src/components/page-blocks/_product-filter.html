@@ -1,0 +1,34 @@
+<div class="product-filter d-none d-md-block">
+	<div class="container">
+		<div class="product-filter-grid">
+			@@include('_filter-checkbox.html', { 'icon': '1', 'text': 'Candies'})
+			@@include('_filter-checkbox.html', { 'icon': '2', 'text': 'Bulbs'})
+			@@include('_filter-checkbox.html', { 'icon': '3', 'text': 'Curtain'})
+			@@include('_filter-checkbox.html', { 'icon': '4', 'text': 'Cluster'})
+			@@include('_filter-checkbox.html', { 'icon': '5', 'text': 'Icicle'})
+			@@include('_filter-checkbox.html', { 'icon': '6', 'text': 'Squares'})
+			@@include('_filter-checkbox.html', { 'icon': '7', 'text': 'Dots'})
+			@@include('_filter-checkbox.html', { 'icon': '8', 'text': 'Flex'})
+			@@include('_filter-checkbox.html', { 'icon': '9', 'text': 'Line'})
+			@@include('_filter-checkbox.html', { 'icon': '10', 'text': 'Matrix'})
+			@@include('_filter-checkbox.html', { 'icon': '11', 'text': 'Lightwall'})
+			@@include('_filter-checkbox.html', { 'icon': '12', 'text': 'Spritzer'})
+			@@include('_filter-checkbox.html', { 'icon': '13', 'text': 'Festoon'})
+			@@include('_filter-checkbox.html', { 'icon': '14', 'text': 'Controller'})
+			@@include('_filter-checkbox.html', { 'icon': '4', 'text': 'Strings'})
+			<div class="collapse multi-collapse">
+				@@include('_filter-checkbox.html', { 'icon': '11', 'text': 'Outdoor'})
+			</div>
+			<div class="collapse multi-collapse">
+				@@include('_filter-checkbox.html', { 'icon': '12', 'text': 'Accsessori'})
+			</div>
+			<label class="product-filter-item order-1" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false">
+				<input type="checkbox" class="visually-hidden">
+				<div class="product-filter-item__wrap" data-btn>
+					<img src="img/filter-more.svg" alt="">
+					<span data-text-old="Еще" data-text-new="Скрыть"></span>
+				</div>
+			</label>
+		</div>
+	</div>
+</div>
