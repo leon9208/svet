@@ -131,7 +131,10 @@
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-	--bs-gutter-x: 1.25rem;
+	--bs-gutter-x: 4rem;
+	@include from-xs() {
+		--bs-gutter-x: 1.25rem;
+	}
 }
 
 .row {
@@ -226,6 +229,40 @@
 	}
 }
 
+.form {
+	&-checkbox {
+		display: flex;
+		gap: 0.5rem;
+		font-size: 12px;
+		align-items: center;
+		user-select: none;
+		@include from-xs() {
+			font-size: 20px;
+			gap: 1rem;
+		}
+		&-input {
+			appearance: none;
+			height: 20px;
+			width: 20px;
+			border-radius: 4px;
+			background-color: transparent;
+			border: 1px solid var(--bs-primary);
+			background-repeat: no-repeat;
+			background-position: center;
+			cursor: pointer;
+			&:checked {
+				background-color: var(--bs-primary);
+				background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg id='Interface / Check'%3E%3Cpath id='Vector' d='M6 12L10.2426 16.2426L18.727 7.75732' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+			}
+			@include from-xs() {
+				border-width: 2px;
+				height: 24px;
+				width: 24px;
+			}
+		}
+	}
+}
+
 .text-ticker {
 	position: relative;
 	padding: 12px 0;
@@ -246,12 +283,61 @@
 	}
 }
 
+.tooltip {
+	&-info {
+		--bs-tooltip-opacity: 1;
+		--bs-tooltip-bg: var(--bs-primary);
+		--bs-tooltip-color: var(--bs-white);
+		--bs-tooltip-border-radius: 10px;
+		text-align: left;
+		font-size: 12px;
+		line-height: 1.3;
+		--bs-tooltip-padding-x: 1em;
+		--bs-tooltip-padding-y: 1em;
+		@include from-xs() {
+			font-size: 16px;
+			--bs-tooltip-max-width: 356px;
+		}
+		.tooltip-inner {
+			text-align: inherit;
+		}
+	}
+}
+
+.dropdown {
+	&-toggle {
+		padding: 0;
+		gap: 4px;
+		&[aria-expanded=true]{
+			background-color: transparent;
+		}
+		&::after {
+			border: 0;
+			margin: 0;
+			height: 24px;
+			width: 24px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 7.5L9.84315 13.1569L4.18629 7.5' stroke='white'/%3E%3C/svg%3E%0A");
+		}
+	}
+	&-menu {
+		--bs-dropdown-bg: #312E3D;
+		--bs-dropdown-link-active-bg: transparent;
+		--bs-dropdown-border-radius: 12px;
+		--bs-dropdown-link-hover-bg: var(--bs-dropdown-link-active-bg);
+	}
+	&-item {
+		--bs-dropdown-item-padding-y: 0.4rem;
+		--bs-dropdown-item-padding-x: 1.25rem;
+	}
+}
+
 @keyframes text {
 	from {
 		transform: translateX(0%);
 	 }
-	 /* Magic is here. This is the width of the elem with text after rendering the page */
 	 to {
 		transform: translateX(-160%);
 	 }
-  }
+}

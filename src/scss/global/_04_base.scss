@@ -5,6 +5,9 @@ body {
 }
 
 svg { flex: none; }
+picture, img {
+	display: block;
+}
 
 .section {
 	position: relative;
