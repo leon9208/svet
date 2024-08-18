@@ -1,0 +1,17 @@
+@@include('components/page-blocks/_head.html',{
+	"lang":"ru",
+	"title":"Каталог",
+	"description":"Каталог",
+	"keywords":"",
+	"favicon":"img/favicons/favicon",
+	"body-class": "inner"
+
+})
+<main class="main">
+	@@include('components/page-blocks/_top-bnr.html')
+	@@include('components/page-blocks/_product-filter.html')
+	@@include('components/page-blocks/_catalog.html', { 'class': 'section', 'headline': false })
+	@@include('components/page-blocks/_collections.html')
+	@@include('components/page-blocks/_subscribe.html')
+</main>
+@@include('components/page-blocks/_footer.html')
