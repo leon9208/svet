@@ -1,6 +1,9 @@
 html, body { overflow-x: hidden; }
 
 body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smooth: never;
 	@include xs() { --bs-body-font-size: 14px; }
 }
 
@@ -20,4 +23,12 @@ picture, img {
 		margin-bottom: 40px;
 		@include from-md() { margin-bottom: 50px; }
 	}
+}
+
+
+.main-content {
+	position: relative;
+	// margin-top: 150vh;
+	// height: 100%;
+	background-color: var(--bs-body-bg);
 }
