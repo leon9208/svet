@@ -5,7 +5,7 @@
 		padding: 22px 0;
 	}
 	&__logo {
-		@include xs() {
+		@include sm() {
 			display: inline-flex;
 			max-width: 82px;
 		}
