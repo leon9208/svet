@@ -1,4 +1,8 @@
 .top-bnr {
+	@include from-xs() {
+		padding-top: 30px;
+		padding-bottom: 0;
+	}
 	@include from-sm() {
 		padding-top: 70px;
 		padding-bottom: 50px;
@@ -31,7 +35,7 @@
 		align-items: flex-end;
 		overflow: hidden;
 		position: relative;
-		@include from-sm() {
+		@include from-xs() {
 			border-radius: 15px;
 		}
 	}
