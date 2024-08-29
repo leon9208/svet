@@ -1,5 +1,5 @@
 const plugins = [
-	// 'node_modules/jquery/dist/jquery.min.js',
+	'node_modules/jquery/dist/jquery.min.js',
 	'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
 	'node_modules/swiper/swiper-bundle.min.js',
 	'src/libs/js/*.js',
