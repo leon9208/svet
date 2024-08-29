@@ -151,4 +151,37 @@ if(dropdownCloseBtn.length > 0) {
 };
 
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+$(window).on('scroll', function() {
+	var scrollTop = $(this).scrollTop();
+	var percentage = (100 - scrollTop);
+
+	var newRadius = 11
+	newRadius = Math.min(100 + scrollTop / 5, 500)/10; // You can adjust these numbers
+	var newRadiusOuter = scrollTop; // You can adjust these numbers
+	if(scrollTop < 35) {
+		newRadiusOuter = 35;
+	}
+
+	percentage = parseInt((100 - scrollTop));
+	if(scrollTop < 0 || percentage < 0) {
+		percentage = 0;
+	}
+
+	if(percentage > 55) {
+		percentage = 55;
+	}
+
+	if ($(window).width() <= 1024) {
+		$('.hero-mask').css('background', `radial-gradient(500px 300px at 50% 46%,  rgba(0,0,0,${percentage}%)  0%, rgba(0,0,0,1) ${newRadiusOuter}%)`);
+	}
+	else {
+		$('.hero-mask').css('background', `radial-gradient(ellipse at 50% 42%,  rgba(0,0,0,${percentage}%)  0%, rgba(0,0,0,1) ${newRadiusOuter}%)`);
+	}
+	if(newRadiusOuter >= 70) {
+		$('.hero-title span').addClass('is-visible');
+	} else {
+		$('.hero-title span').removeClass('is-visible');
+	}
+});
