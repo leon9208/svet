@@ -4,7 +4,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-smooth: never;
-	@include xs() { --bs-body-font-size: 14px; }
+	padding-top: 80px;
+	@include xs() {
+		--bs-body-font-size: 14px;
+	}
+	@include from-sm() {
+		padding-top: 100px;
+	}
 }
 
 svg { flex: none; }
