@@ -45,13 +45,13 @@ const blogSlider = new Swiper('.blog-slider', {
 	}
 });
 
-const reviewsSlider = new Swiper('.reviews-slider', {
+const feedbackSlider = new Swiper('.feedbacks-slider', {
 	speed: 400,
 	spaceBetween: 20,
 	slidesPerView: 'auto',
 	navigation: {
-		nextEl: '.reviews .swiper-button-next',
-		prevEl: '.reviews .swiper-button-prev',
+		nextEl: '.feedbacks .swiper-button-next',
+		prevEl: '.feedbacks .swiper-button-prev',
 	},
 	breakpoints: {
 		// when window width is >= 320px
