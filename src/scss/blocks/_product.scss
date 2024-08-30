@@ -18,9 +18,9 @@
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 10px;
-			@include from-sm() { grid-template-columns: repeat(5, 1fr); gap: 20px;}
-			@include from-md() { grid-template-columns: repeat(6, 1fr); }
-			@include from-lg() { grid-template-columns: repeat(7, 1fr); }
+			@include from-sm() { grid-template-columns: repeat(5, 1fr); }
+			@include from-md() { grid-template-columns: repeat(7, 1fr); gap: 16px;}
+			@include from-lg() { grid-template-columns: repeat(8, 1fr); gap: 20px;}
 			@include from-xl() { grid-template-columns: repeat(8, 1fr); }
 		}
 		&-dropdown {
@@ -65,10 +65,13 @@
 				border-radius: 6px;
 				font-size: 14px;
 				gap: 6px;
-				transition: .25s ease;
 				user-select: none;
 				width: 100%;
 				height: 100%;
+				& * {
+					user-select: none;
+					pointer-events: none;
+				}
 				&:not([data-btn])::after {
 					content: '';
 					position: absolute;
@@ -80,7 +83,6 @@
 					background-position: center;
 					top: 8px;
 					right: 8px;
-					transition: .25s ease;
 					opacity: 0;
 					@include from-sm() {
 						height: 20px;
