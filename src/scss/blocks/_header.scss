@@ -5,8 +5,11 @@
 	left: 0;
 	width: 100%;
 	background-color: var(--bs-black);
-	padding: 20px 0;
+	color: var(--bs-white);
+	padding: 22px 0;
+	max-height: 80px;
 	@include from-xs() {
+		max-height: 100px;
 		padding: 22px 0;
 	}
 	&__logo {
