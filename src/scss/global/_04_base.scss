@@ -11,6 +11,11 @@ body {
 	@include from-sm() {
 		padding-top: 100px;
 	}
+	&[data-theme='light'] {
+		background-color: #F6F3F9;
+		color: var(--bs-black);
+		--bs-link-color-rgb: 0,0,0;
+	}
 }
 
 svg { flex: none; }
@@ -34,7 +39,7 @@ picture, img {
 
 .main-content {
 	position: relative;
-	// margin-top: 150vh;
-	// height: 100%;
+	margin-top: 120vh;
+	z-index: 1;
 	background-color: var(--bs-body-bg);
 }
