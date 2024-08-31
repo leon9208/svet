@@ -15,10 +15,29 @@ body {
 		background-color: #F6F3F9;
 		color: var(--bs-black);
 		--bs-link-color-rgb: 0,0,0;
+		.offcanvas-md {
+			--bs-offcanvas-bg: var(--bs-white);
+			.btn-close {
+				--bs-btn-close-white-filter: unset;
+			}
+		}
+		.header {
+			background-color: var(--bs-white);
+			color: var(--bs-black);
+			&-cart::after {
+				background-color: var(--bs-primary);
+				color: var(--bs-white);
+			}
+		}
+		.nav-header {
+			.nav-link {
+				--bs-nav-link-color: var(--bs-black)
+			}
+		}
 	}
 }
 
-svg { flex: none; }
+svg { display: block;flex: none; max-width: 100%;height: auto; }
 picture, img {
 	display: block;
 }

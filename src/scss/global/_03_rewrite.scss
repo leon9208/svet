@@ -2,6 +2,9 @@
 	&-shadow {
 		text-shadow: var(--bs-text-shadow)
 	}
+	&-inherit {
+		color: inherit;
+	}
 }
 .offcanvas {
 	--bs-offcanvas-padding-y: 2rem;
