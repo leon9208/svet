@@ -1,4 +1,4 @@
-$(document).on('ready', function() {
+$(document).ready(function() {
 	
 	const collectionSlider = new Swiper('.collections-slider', {
 		speed: 400,
