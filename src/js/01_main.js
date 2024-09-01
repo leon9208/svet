@@ -125,6 +125,16 @@ $(document).ready(function() {
 		}
 	});
 	
+	var pinSlider = new Swiper(".pin-slider", {
+		slidesPerView: 'auto',
+		loop: false,
+		spaceBetween: 10,
+		breakpoints: {
+			0: { enabled: true },
+			767: { enabled: false }
+		}
+	});
+	
 	var productFilterSlider = new Swiper(".product-filter-slider", {
 		slidesPerView: 1,
 		loop: false,
@@ -193,10 +203,21 @@ $(window).on('scroll', function() {
 	}
 });
 
+// subscribe-form success message
 $('.subscribe-form').on('submit', function(e) {
 	e.preventDefault();
 	$('.subscribe-section .form-msg').addClass('active')
 	setTimeout(function() {
 		$('.subscribe-section .form-msg').removeClass('active')
 	}, 5000)
+});
+
+// pin tooltip
+$('.pin-btn').on('click', function() {
+	if($(this).hasClass('isactive')) {
+		$(this).removeClass('isactive')
+	} else {
+		$('.pin-btn.isactive').removeClass('isactive')
+		$(this).addClass('isactive')
+	}
 });
