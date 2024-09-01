@@ -2,131 +2,148 @@
 	&__row {
 		row-gap: 10px;
 		--bs-gutter-x: 10px !important;
-		@include from-sm() {
+		@include from-lg() {
 			--bs-gutter-x: 20px !important;
 			row-gap: 20px;
 		}
 	}
 }
 .advantage {
-	&:nth-child(1) {
-		.advantage {
-			&-content {
-				padding-bottom: 0;
-			}
-		}
-	}
-	&:nth-child(2) {
-		.advantage {
-			&-image {
-				bottom: 0;
-				padding: 15px;
-				width: 75%;
-				max-width: 130px;
-				margin-top: auto;
-				// width: unset;
-				@include from-sm() {
-					max-width: 100%;
-					padding: 30px;
-				}
-			}
-		}
-	}
-	&:nth-child(3) {
-		.advantage {
-			&-item {
-				align-items: center;
-				justify-content: flex-end;
-			}
-			&-image {
-				bottom: 0;
-				padding: 0 15px 15px;
-				margin-top: -20%;
-				@include from-sm() {
-					padding: 0 30px 30px;
-				}
-			}
-		}
-	}
-	&:nth-child(4) {
-		.advantage {
-			&-item {
-				align-items: flex-start;
-				justify-content: flex-end;
-			}
-			&-content {
-				padding-bottom: 0;
-				@include from-lg() {
-					position: absolute;
-				}
-			}
-			&-image {
-				bottom: 0;
-				padding: 15px;
-				@include from-sm() {
-					margin-left: auto;
-					padding: 30px;
-				}
-			}
-		}
-	}
-	&:nth-child(5) {
-		.advantage {
-			&-item {
-				align-items: flex-start;
-			}
-			&-content {
-				@include from-lg() {
-					position: absolute;
-				}
-			}
-			&-image {
-				margin-top: auto;
-				bottom: 0;
-				@include from-lg() {
-					margin-left: auto;
-					width: 75%;
-				}
-			}
-		}
-	}
 	&-item {
+		display: flex;
+		flex-direction: column;
 		position: relative;
 		background-color: var(--bs-dark);
-		height: 100%;
+		min-height: 180px;
 		border-radius: 12px;
 		display: flex;
 		flex-direction: column;
-		@include from-sm() { border-radius: 15px; }
+		width: 100%;
+		overflow: hidden;
+		@include from-sm() {
+			min-height: 320px;
+			border-radius: 15px;
+		}
+	}
+	&-img {
+		position: absolute;
 	}
 	&-content {
-		top: 0;
-		left: 0;
+		position: relative;
+		z-index: 1;
 		width: 100%;
 		padding: 15px;
-		z-index: 2;
-		@include from-sm() {
-			padding: 30px;
-		}
 		&__title {
 			font-size: 18px;
-			font-weight: 500;
-			margin-bottom: 12px;
+			font-weight: 400;
+			margin-bottom: 0.6em;
+			line-height: 1.12;
+			@include from-sm() {
+				font-size: 24px;
+			}
+			@include from-lg() {
+				font-size: 30px;
+			}
 		}
 		&__text {
 			font-weight: 300;
 			font-size: 10px;
 			line-height: 1.3;
-			color: var(--bs-light);
+			color: #C6C6C6;
 			margin: 0;
-		}
-		@include from-sm() {
-			&__title {
-				font-size: 30px;
-				margin-bottom: 18px;
+			@include from-sm() {
+				font-size: 16px;
 			}
-			&__text {
-				font-size: 1rem;
+		}
+		@include from-md() { padding: 18px; }
+		@include from-lg() { padding: 24px; }
+		@include from-xl() { padding: 30px; }
+	}
+	&:nth-child(1) {
+		.advantage-img {
+			bottom: 0;
+			max-width: 60%;
+			align-self: center;
+			@include from-sm() {
+				right: 0;
+				max-width: 90%;
+			}
+		}
+	}
+	&:nth-child(2) {
+		.advantage-img {
+			max-width: 36%;
+			bottom: 8%;
+			left: 10%;
+			align-self: center;
+			@include from-sm() {
+				bottom: 10%;
+				max-width: 40%;
+			}
+		}
+	}
+	&:nth-child(3) {
+		.advantage-img {
+			max-width: 65%;
+			bottom: 0;
+			align-self: center;
+			@include from-xs() {
+				max-width: 80%;
+				bottom: -2%;
+			}
+			@include from-sm() {
+				bottom: 0;
+				right: 0;
+				max-width: 90%;
+			}
+		}
+	}
+	&:nth-child(4) {
+		.advantage-img {
+			bottom: 5%;
+			align-self: center;
+			max-width: 55%;
+			@include from-sm() {
+				max-width: 70%;
+				bottom: 10%;
+				right: 5%;
+			}
+		}
+	}
+	&:nth-child(5) {
+		.advantage-img {
+			bottom: 0;
+			align-self: center;
+			max-width: 80%;
+			bottom: -5%;
+			@include from-xs() {
+				max-width: 75%;
+			}
+			@include from-sm() {
+				max-width: 100%;
+				right: 0;
+				bottom: 0;
+			}
+			@include from-md() {
+				max-width: 80%;
+				// right: 0;
+				// bottom: 0;
+			}
+		}
+	}
+	&:nth-child(6) {
+		.advantage-img {
+			bottom: 0;
+			max-width: 65%;
+			right: 0;
+			@include from-xs() {
+				max-width: 60%;
+			}
+			@include from-sm() {
+				max-width: 70%;
+			}
+			@include from-md() {
+				max-width: 70%;
 			}
 		}
 	}
