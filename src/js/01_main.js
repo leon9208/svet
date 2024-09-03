@@ -125,13 +125,23 @@ $(document).ready(function() {
 		}
 	});
 	
-	var pinSlider = new Swiper(".pin-slider", {
+	var pinSliderMobile = new Swiper(".pin-slider--mobile", {
 		slidesPerView: 'auto',
 		loop: false,
 		spaceBetween: 10,
 		breakpoints: {
 			0: { enabled: true },
 			767: { enabled: false }
+		}
+	});
+	
+	var pinSliderDesktop = new Swiper(".pin-slider--desktop", {
+		slidesPerView: 1,
+		loop: false,
+		spaceBetween: 20,
+		breakpoints: {
+			0: { enabled: false },
+			767: { enabled: true }
 		}
 	});
 	
