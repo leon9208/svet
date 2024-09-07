@@ -70,6 +70,7 @@
 		}
 	}
 	&-inner {
+		position: relative;
 		display: flex;
 		align-items: center;
 		position: relative;
@@ -78,7 +79,23 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		padding: 30px 0;
+		&__media {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+			video {
+				object-fit: cover;
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
 		&__title {
+			position: relative;
 			line-height: 112%;
 			letter-spacing: 0.03em;
 			text-transform: uppercase;
