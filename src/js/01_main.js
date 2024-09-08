@@ -185,6 +185,17 @@ $(document).ready(function() {
 			767: { enabled: false }
 		}
 	});
+
+
+	var optionsSlider = new Swiper(".options-slider", {
+		slidesPerView: 'auto',
+		loop: false,
+		spaceBetween: 10,
+		breakpoints: {
+			0: { enabled: true },
+			767: { enabled: false }
+		}
+	});
 	
 	// close dropwdown on click
 	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -281,3 +292,11 @@ document.getElementById('modalVideo').addEventListener('hide.bs.modal', () => {
   // Stop the video by resetting the source
   document.getElementById('video').src = videoSrc;
 });
+
+
+//gamer options tab
+$('.options-item').on('mouseover', function() {
+	let optImages = $('.options-images__item');
+	optImages.removeClass('active');
+	$(optImages[$(this).index()]).addClass('active')
+})

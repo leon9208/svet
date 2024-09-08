@@ -7,26 +7,11 @@
 	"body-class": 'inner'
 })
 <main class="main">
-	<div class="hero-inner" style="background-image: url(img/hero-inner-1.webp);">
-		<div class="container">
-			<h1 class="hero-inner__title">опыт <br>выходящий <br>за границы</h1>
-		</div>
-	</div>
-	@@include('components/page-blocks/_gamers-slider.html')
+	@@include('components/bem-blocks/_hero-video.html', {'title': 'опыт <br>выходящий <br>за границы'})
+	@@include('components/page-blocks/_options.html')
+	@@include('components/page-blocks/_gamers-slider.html', {'title': 'Мастхэв для любой стрим-комнаты', 'link': false})
 	@@include('components/page-blocks/_gamers-catalog.html')
-	
-	<!-- @@include('components/page-blocks/_hero.html')
-	<div class="main-content">
-		@@include('components/page-blocks/_ticker-text.html')
-		@@include('components/page-blocks/_tooltip-slider.html')
-		@@include('components/page-blocks/_bnr.html')
-		@@include('components/page-blocks/_advantages.html')
-		@@include('components/page-blocks/_collections.html')
-		@@include('components/page-blocks/_Inspiration.html')
-		@@include('components/page-blocks/_reviews.html')
-		@@include('components/page-blocks/_catalog.html', { 'class': 'section', 'headline': true })
-		@@include('components/page-blocks/_blog.html')
-		@@include('components/page-blocks/_subscribe.html')
-	</div> -->
+	@@include('components/page-blocks/_reviews.html')
+	@@include('components/page-blocks/_subscribe.html')
 </main>
 @@include('components/page-blocks/_footer.html')
