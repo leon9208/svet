@@ -50,7 +50,7 @@
 	--bs-btn-font-family: var(--bs-body-font-family);
 	--bs-btn-font-weight: 400;
 	--bs-btn-padding-x: 1em;
-	--bs-btn-padding-y: 1em;
+	--bs-btn-padding-y: 0;
 	--bs-btn-border-width: 0;
 	--bs-btn-font-size: 1rem;
 	--bs-btn-border-radius: 0.4em;
@@ -65,7 +65,9 @@
 	user-select: none;
 	outline: none;
 	transition: color .25s ease, box-shadow .25s ease, background-color 0.25s ease;
+	min-height: 44px;
 	@include from-md() {
+		min-height: 64px;
 		--bs-btn-font-size: 22px;
 	}
 	// &:hover {
@@ -233,6 +235,12 @@
 }
 
 .form {
+	&-control {
+		min-height: 44px;
+		@include from-md() {
+			min-height: 64px;
+		}
+	}
 	&-msg {
 		top: 0;
 		left: 0;
