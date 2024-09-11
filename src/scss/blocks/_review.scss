@@ -25,33 +25,10 @@
 	}
 }
 .review {
-	display: flex;
-	align-items: center;
-	gap: 30px;
-	background-color: #312E3D;
-	border-radius: 12px;
-	padding: 25px;
-	height: 100%;
-	@include from-md() {
-		padding: 35px 30px;
-		border-radius: 14px;
-	}
-	&__content {
-		display: flex;
-		flex-direction: column;
-		gap: 24px;
-		@include from-md() {
-			gap: 30px
-		}
-	}
-	img { 
-		border: 1px solid transparent;
-		transition: .25s ease;
-	}
-	&:hover {
-		img {
-			border-color: var(--bs-primary);
-			box-shadow: 0 0 10px rgba(var(--bs-primary-rgb), 0.6);
+	&-item {
+		aspect-ratio: 1.2 / 1;
+		@include from-sm() {
+			aspect-ratio: 1.9 / 1;
 		}
 	}
 }

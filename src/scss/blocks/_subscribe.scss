@@ -1,0 +1,33 @@
+.subscribe {
+	&-section {
+		&__wrap {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			position: relative;
+			overflow: hidden;
+			padding: 20px;
+			background-color: var(--bs-primary);
+			border-radius: 10px;
+			@include from-sm() {
+				padding: 30px;
+				gap: 30px;
+				border-radius: 14px;
+			}
+		}
+	}
+	&-title {
+		line-height: 1.12;
+		font-size: 18px;
+		margin: 0;
+		@include from-sm() {
+			font-size: 30px;
+		}
+	}
+	&-row {
+		row-gap: 20px;
+		@include from-sm() {
+			row-gap: 30px;
+		}
+	}
+}

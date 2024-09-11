@@ -74,6 +74,33 @@ $(document).ready(function() {
 		}
 	});
 	
+	const reviewsSlider = new Swiper('.reviews-slider', {
+		speed: 400,
+		spaceBetween: 20,
+		slidesPerView: 'auto',
+		navigation: {
+			nextEl: '.reviews .swiper-button-next',
+			prevEl: '.reviews .swiper-button-prev',
+		},
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+				slidesPerView: 'auto',
+				spaceBetween: 10
+			},
+			// when window width is >= 768px
+			768: {
+				slidesPerView: 'auto',
+				spaceBetween: 20
+			},
+			// when window width is >= 991px
+			991: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			}
+		}
+	});
+	
 	var storiesSlider = new Swiper(".stories-slider", {
 		effect: "coverflow",
 		grabCursor: true,
@@ -125,13 +152,23 @@ $(document).ready(function() {
 		}
 	});
 	
-	var pinSlider = new Swiper(".pin-slider", {
+	var pinSliderMobile = new Swiper(".pin-slider--mobile", {
 		slidesPerView: 'auto',
 		loop: false,
 		spaceBetween: 10,
 		breakpoints: {
 			0: { enabled: true },
 			767: { enabled: false }
+		}
+	});
+	
+	var pinSliderDesktop = new Swiper(".pin-slider--desktop", {
+		slidesPerView: 1,
+		loop: false,
+		spaceBetween: 20,
+		breakpoints: {
+			0: { enabled: false },
+			767: { enabled: true }
 		}
 	});
 	
@@ -143,6 +180,17 @@ $(document).ready(function() {
 			el: '.product-filter-slider .swiper-pagination',
 			type: 'bullets',
 		},
+		breakpoints: {
+			0: { enabled: true },
+			767: { enabled: false }
+		}
+	});
+
+
+	var optionsSlider = new Swiper(".options-slider", {
+		slidesPerView: 'auto',
+		loop: false,
+		spaceBetween: 10,
 		breakpoints: {
 			0: { enabled: true },
 			767: { enabled: false }
@@ -221,3 +269,34 @@ $('.pin-btn').on('click', function() {
 		$(this).addClass('isactive')
 	}
 });
+
+// video iframe in modal
+let videoSrc;
+
+// Add click event listener to all elements with class "video-btn"
+document.querySelectorAll('.video-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    // Get the video source from the data-src attribute
+    videoSrc = button.dataset.src;
+  });
+});
+
+// Add event listener for when the modal is opened
+document.getElementById('modalVideo').addEventListener('shown.bs.modal', () => {
+  // Update the video source with autoplay and other options
+  document.getElementById('video').src = videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0";
+});
+
+// Add event listener for when the modal is closed
+document.getElementById('modalVideo').addEventListener('hide.bs.modal', () => {
+  // Stop the video by resetting the source
+  document.getElementById('video').src = videoSrc;
+});
+
+
+//gamer options tab
+$('.options-item').on('mouseover', function() {
+	let optImages = $('.options-images__item');
+	optImages.removeClass('active');
+	$(optImages[$(this).index()]).addClass('active')
+})
