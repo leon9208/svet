@@ -93,11 +93,11 @@
 	}
 	&-dark {
 		--bs-btn-bg: var(--bs-dark);
-		--bs-btn-active-bg: var(--bs-dark);
-		--bs-btn-hover-bg: var(--bs-dark);
+		--bs-btn-active-bg: var(--bs-white);
+		--bs-btn-hover-bg: var(--bs-white);
 		--bs-btn-color: var(--bs-white);
-		--bs-btn-hover-color: var(--bs-white);
-		--bs-btn-active-color: var(--bs-white);
+		--bs-btn-hover-color: var(--bs-dark);
+		--bs-btn-active-color: var(--bs-dark);
 	}
 	&-none {
 		display: inline-flex;
