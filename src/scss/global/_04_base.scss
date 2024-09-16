@@ -13,9 +13,6 @@ body {
 	}
 }
 [data-theme='light'] {
-	background-color: #F6F3F9;
-	color: var(--bs-black);
-	--bs-link-color-rgb: 0,0,0;
 	.offcanvas-md {
 		--bs-offcanvas-bg: var(--bs-white);
 		.btn-close {
@@ -50,11 +47,36 @@ picture, img {
 	padding: 40px 0;
 	@include from-md() { padding: 50px 0 ; }
 	&-headline {
-		margin-bottom: 40px;
-		@include from-md() { margin-bottom: 50px; }
+		margin-bottom: 28px;
+		@include from-md() { margin-bottom: 38px; }
+		h2 {
+			margin-bottom: 14px;
+			@include from-md() {
+				margin-bottom: 30px;
+			}
+		}
+		h3, .h3 {
+			font-size: 16px;
+			line-height: 1.2;
+			@include from-md() {
+				line-height: 1.12;
+				font-size: 30px;
+			}
+		}
+
 	}
 }
 
+.page-breadcrumb {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: var(--bs-primary);
+	svg {
+		height: 1.1em;
+		width: 1.1em;
+	}
+}
 
 .main-content {
 	position: relative;
