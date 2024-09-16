@@ -14,13 +14,13 @@
 		@@include('components/page-blocks/_tooltip-slider.html')
 		@@include('components/page-blocks/_gamers-slider.html', {'title': 'Twinkly для геймеров', 'link': true})
 		@@include('components/page-blocks/_bnr.html')
-		@@include('components/page-blocks/_advantages.html')
+		@@include('components/page-blocks/_advantages.html', { 'adv': 'gamers' })
 		@@include('components/page-blocks/_collections.html')
 		@@include('components/page-blocks/_Inspiration.html')
 		@@include('components/page-blocks/_feedback.html')
 		@@include('components/page-blocks/_catalog.html', { 'class': 'section', 'headline': true })
 		@@include('components/page-blocks/_blog.html')
-		@@include('components/page-blocks/_subscribe.html')
+		@@include('components/page-blocks/_subscribe.html', {'headline': false, 'title': 'Хотите узнать больше о световом дизайне? <br>Подпишитесь на нашу рассылку!'})
 	</div>
 </main>
 @@include('components/page-blocks/_footer.html')
