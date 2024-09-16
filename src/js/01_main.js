@@ -172,6 +172,34 @@ $(document).ready(function() {
 		}
 	});
 	
+	var designCarouselMobile = new Swiper(".design-carousel-mobile", {
+		slidesPerView: 'auto',
+		loop: false,
+		spaceBetween: 10,
+		pagination: {
+			el: '.design-carousel-mobile .swiper-pagination',
+			type: 'bullets',
+		},
+		breakpoints: {
+			0: { enabled: true },
+			767: { enabled: false }
+		}
+	});
+	
+	var designCarouselDesktop = new Swiper(".design-carousel-desktop", {
+		slidesPerView: 1,
+		loop: false,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.design-carousel .swiper-button-next',
+			prevEl: '.design-carousel .swiper-button-prev',
+		},
+		breakpoints: {
+			0: { enabled: false },
+			767: { enabled: true }
+		}
+	});
+	
 	var productFilterSlider = new Swiper(".product-filter-slider", {
 		slidesPerView: 1,
 		loop: false,
@@ -296,18 +324,17 @@ $('.pin-btn').on('click', function() {
 let videoSrc;
 
 // Add click event listener to all elements with class "video-btn"
-document.querySelectorAll('.video-btn').forEach(button => {
-	if(button.length > 0) {
+var videoBtns = document.querySelectorAll('.video-btn')
+if(videoBtns.length > 0) {
+	videoBtns.forEach(button => {
 		button.addEventListener('click', () => {
-
 			videoSrc = button.dataset.src;
 		});
-	}
-});
+	});
+}
 
 // Add event listener for when the modal is opened
 document.getElementById('modalVideo').addEventListener('shown.bs.modal', () => {
-	// Update the video source with autoplay and other options
 	document.getElementById('video').src = videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0";
 });
 

@@ -1,57 +1,118 @@
 @@include('components/page-blocks/_head.html',{
 	"lang":"ru",
-	"title":"Для геймеров",
-	"description":"Для геймеров",
+	"title":"Для дизайнеров",
+	"description":"Для дизайнеров",
 	"keywords":"",
 	"favicon":"img/favicons/favicon",
 	"body-class": 'inner',
 	"theme": 'light'
 })
 <main class="main">
-	<div class="hero-inner" style="background-image: url(img/hero-inner-1.webp);">
+	@@include('components/bem-blocks/_hero-video.html', {'title': 'незабываемое освещение для ваших проектов / клиентов / портфолио'})
+	@@include('components/page-blocks/_advantages.html', { 'adv': 'designers' })
+	@@include('components/page-blocks/_design-form.html')
+	@@include('components/page-blocks/_design-carousel.html')
+	<section class="section">
 		<div class="container">
-			<h1 class="hero-inner__title">опыт <br>выходящий <br>за границы</h1>
+			<div class="section-headline">
+				<h2>Установка и настройка</h2>
+				<p class="h3 mb-0">Устройства Twinkly из коробки готовы к сопряжению. <br class="d-none d-sm-block"> Просто подключите их к одному контроллеру и объедините в сеть</p>
+			</div>
+			<div class="row row-gap-2 row-gap-md-4 justify-content-center">
+				<div class="col-md-4 col-lg-4">
+					<div class="design-card">
+						<div class="design-card__img">
+							@@include('components/bem-blocks/_jpg.html', {
+								'img': 'collection-img-2',
+								'height': '440',
+								'width': '374',
+								'class': '',
+							})
+						</div>
+						<div class="design-card__content">
+							<h3>Один контроллер на сеть устройств</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-4">
+					<div class="design-card">
+						<div class="collection-card__img">
+							@@include('components/bem-blocks/_jpg.html', {
+								'img': 'collection-img-2',
+								'height': '440',
+								'width': '374',
+								'class': '',
+							})
+						</div>
+						<div class="design-card__content">
+							<h3>Аксессуары, расширяющие функционал</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-4">
+					<div class="design-card">
+						<div class="design-card__img">
+							@@include('components/bem-blocks/_jpg.html', {
+								'img': 'collection-img-2',
+								'height': '440',
+								'width': '374',
+								'class': '',
+							})
+						</div>
+						<div class="design-card__content">
+							<h3>Управление через мобильное приложение</h3>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-	<!-- @@include('components/page-blocks/_gamers-slider.html') -->
+	</section>
+	<section class="section">
+		<div class="container">
+			<div class="section-headline">
+				<h2 class="m-0">Как настроить контроллер</h2>
+			</div>
+			@@include('components/bem-blocks/_video-btn.html', {'class': 'video-section'})
+		</div>
+	</section>
 	<section class="section catalog">
 		<div class="container">
 			<div class="section-headline">
 				<h2 class="m-0">Каталог</h2>
 			</div>
 			<div class="row catalog__row">
-				<div class="col-6 col-lg-6 order-md-1">
+				<div class="col-6 col-lg-6">
 					<a href="#" class="catalog-item catalog-item--gradient" style="background-image: url(img/line.webp);">
 						<div class="catalog-item__content">
-							<h3 class="catalog-item__title">Line</h3>
+							<h3 class="catalog-item__title">Cluster</h3>
 						</div>
 					</a>
 				</div>
-				<div class="col-6 col-lg-6 order-md-1">
+				<div class="col-6 col-lg-6">
 					<a href="#" class="catalog-item catalog-item--gradient" style="background-image: url(img/squares.webp);">
 						<div class="catalog-item__content">
-							<h3 class="catalog-item__title">Squares</h3>
+							<h3 class="catalog-item__title">Curtain</h3>
 						</div>
 					</a>
 				</div>
-				<div class="col-12 col-lg-6">
+				<div class="col-12 col-lg-6 order-lg-1">
+					<a href="#" class="catalog-item catalog-item--gradient " style="background-image: url(img/flex.webp);">
+						<div class="catalog-item__content">
+							<h3 class="catalog-item__title">Icicle</h3>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-lg-3">
 					<a href="#" class="catalog-item catalog-item--gradient" style="background-image: url(img/matrix.webp);">
 						<div class="catalog-item__content">
-							<h3 class="catalog-item__title">Matrix</h3>
+							<h3 class="catalog-item__title">Strings</h3>
 						</div>
 					</a>
 				</div>
-				<div class="col-6 col-lg-3">
-					<a href="#" class="catalog-item catalog-item--gradient" style="background-image: url(img/flex.webp);">
-						<div class="catalog-item__content">
-							<h3 class="catalog-item__title">Flex</h3>
-						</div>
-					</a>
-				</div>
-				<div class="col-6 col-lg-3">
+				<div class="col-6 col-lg-3 order-1">
 					<a href="#" class="catalog-item catalog-item--gradient" style="background-image: url(img/dots.webp);">
 						<div class="catalog-item__content">
-							<h3 class="catalog-item__title">Dots</h3>
+							<h3 class="catalog-item__title">Candies</h3>
 						</div>
 					</a>
 				</div>
@@ -59,18 +120,6 @@
 			</div>
 		</div>
 	</section>
-	<!-- @@include('components/page-blocks/_hero.html')
-	<div class="main-content">
-		@@include('components/page-blocks/_ticker-text.html')
-		@@include('components/page-blocks/_tooltip-slider.html')
-		@@include('components/page-blocks/_bnr.html')
-		@@include('components/page-blocks/_advantages.html')
-		@@include('components/page-blocks/_collections.html')
-		@@include('components/page-blocks/_Inspiration.html')
-		@@include('components/page-blocks/_reviews.html')
-		@@include('components/page-blocks/_catalog.html', { 'class': 'section', 'headline': true })
-		@@include('components/page-blocks/_blog.html')
-		@@include('components/page-blocks/_subscribe.html')
-	</div> -->
+	@@include('components/page-blocks/_subscribe.html', {'headline': true, 'title': 'Здесь мы ждём оффер'})
 </main>
 @@include('components/page-blocks/_footer.html')
