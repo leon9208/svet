@@ -90,7 +90,7 @@
 					}
 				}
 				&[data-btn] {
-					background-color: #312E3D;
+					background-color: var(--bs-dark-bg-subtle);
 					span {
 						&::after {
 							content: attr(data-text-old);
