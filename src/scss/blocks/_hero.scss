@@ -93,6 +93,16 @@
 				top: 0;
 				left: 0;
 			}
+			&--overlay {
+				&::after {
+					content: '';
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					background-color: rgba(0,0,0, 0.6);
+					pointer-events: none;
+				}
+			}
 		}
 		&__title {
 			position: relative;
@@ -100,7 +110,6 @@
 			letter-spacing: 0.03em;
 			text-transform: uppercase;
 			text-align: center;
-			color: #FFF8BA;
 			font-size: 10vw;
 			font-weight: 600;
 			@include from-sm() {
