@@ -2,6 +2,57 @@
 	&-section {
 		overflow: hidden;
 	}
+	&-nav {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		margin-bottom: 24px;
+		@include from-sm() {
+			gap: 40px;
+			margin-bottom: 30px;
+			span {
+				font-size: 20px;
+			}
+		}
+		&__wrap {
+			padding: 7px 0;
+			overflow-x: auto;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			@include from-sm() {
+				gap: 20px;
+			}
+		}
+		&__btn {
+			height: 42px;
+			font-size: 14px;
+			border-radius: 6px;
+			background-color: var(--bs-dark-bg-subtle);
+			color: var(--bs-white);
+			white-space: nowrap;
+			flex: none;
+			border: 0;
+			padding: 0 16px;
+			&.active {
+				background-color: var(--bs-primary);
+			}
+			&:hover {
+				box-shadow: 0 0 10px 0 rgba(var(--bs-primary-rgb), 1);
+			}
+			@include from-sm() {
+				border-radius: 10px;
+				padding: 0 30px;
+				height: 62px;
+			}
+		}
+	}
+	&-row {
+		row-gap: 24px;
+		@include md() {
+			row-gap: 20px;
+		}
+	}
 	&-slider {
 		@include md() {
 			overflow: unset;
@@ -14,15 +65,38 @@
 		}
 	}
 	&-card {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		height: auto;
 		text-decoration: none;
 		height: 100%;
+		background-color: var(--blog-card-bg);
+		color: var(--blog-card-color);
+		&--full {
+			color: var(--bs-white);
+			min-height: 248px;
+			.blog-card {
+				&__category {
+					color: inherit;
+				}
+				&__content {
+					background: linear-gradient(180deg,rgba(0,0,0,.3) 0,rgba(0,0,0,.3) 42%,rgba(0,0,0,.5) 100%);
+				}
+				&__img {
+					position: absolute;
+					min-height: 100%;
+					height: 100%;
+					z-index: 1;
+				}
+			}
+		}
 		&__img {
 			width: 100%;
-			aspect-ratio: 1 / 0.5;
-			background: #ccc;
+			height: 125px;
+			@include from-sm() {
+				height: 185px;
+			}
 			picture, img {
 				height: 100%;
 				width: 100%;
@@ -33,14 +107,15 @@
 			}
 		}
 		&__content {
+			z-index: 1;
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			padding: 1.25rem 1rem;
-			background-color: var(--bs-dark);
-			gap: 1rem;
+			gap: 12px;
 			flex-grow: 1;
 			@include from-lg() {
-				gap: 1.25rem;
+				gap: 16px;
 				padding: 30px;
 			}
 		}
@@ -50,10 +125,10 @@
 			font-weight: 300;
 		}
 		&__text {
-			line-height: 1.3;
 			margin: 0;
-			color: var(--bs-white);
+			line-height: 1.2;
 			@include from-lg() {
+				line-height: 1.3;
 				font-size: 22px;
 			}
 		}

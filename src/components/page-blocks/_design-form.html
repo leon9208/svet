@@ -1,0 +1,42 @@
+<section class="section">
+	<div class="container">
+		<div class="design-subscribe">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="section-headline">
+						<h2>Развивайтесь <br>с Twinkly</h2>
+						<p class="h3">присоединяйтесь к партнерской программе и получайте персональные предложения для себя и клиентов</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<form>
+						<div class="form-wrap d-flex flex-column">
+							<label class="w-100">
+								<input type="text" class="form-control is-invalid" placeholder="ФИО" value="aksjdnkajsnd">
+								<div class="form-message">Ошибка</div>
+							</label>
+							<label class="w-100">
+								<input type="email" class="form-control" placeholder="Ваш e-mail">
+								<div class="form-message d-none">Ошибка</div>
+							</label>
+							<label class="w-100">
+								<input type="tel" class="form-control" placeholder="Ваш номер">
+								<div class="form-message d-none">Ошибка</div>
+							</label>
+							<button class="btn btn-primary d-none d-md-block" type="submit">Подписаться</button>
+							<button class="btn btn-dark d-flex d-md-none" type="submit">
+								<span>Подписаться</span>
+								@@include('../bem-blocks/_sprite.html', {
+									'id': 'arr-right',
+									'height': '20',
+									'width': '20',
+									'class': ''
+								})
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

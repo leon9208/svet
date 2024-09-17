@@ -1,4 +1,7 @@
 .top-bnr {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	@include from-xs() {
 		padding-top: 30px;
 		padding-bottom: 0;

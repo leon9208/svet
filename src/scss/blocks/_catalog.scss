@@ -15,7 +15,7 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		min-height: 200px;
+		min-height: 180px;
 		border-radius: 10px;
 		background-color: var(--bs-primary);
 		color: var(--bs-white);
@@ -25,7 +25,6 @@
 		&--gradient {
 			.catalog-item__content {
 				background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 41.74%);
-
 			}
 		}
 		&:hover {

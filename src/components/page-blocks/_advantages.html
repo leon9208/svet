@@ -1,107 +1,213 @@
-<section class="section advantages">
-	<div class="container">
-		<div class="section-headline">
-			<h2 class="mb-0">Преимущества</h2>
+@@if(adv === 'gamers') {
+	<section class="section advantages">
+		<div class="container">
+			<div class="section-headline">
+				<h2 class="mb-0">Преимущества</h2>
+			</div>
+			<div class="row advantages__row">
+				<div class="col-6 col-lg-3 advantage">
+					<div class="advantage-item">
+						<div class="advantage-content">
+							<h3 class="advantage-content__title">Качество</h3>
+							<p class="advantage-content__text">Долговечные материалы и передовые технологии для безупречной работы</p>
+						</div>
+						<div class="advantage-img">
+							<picture>
+								<source media="(min-width: 767px)" srcset="img/advantage1.webp" type="image/webp">
+								<source media="(max-width: 768px)" srcset="img/advantage1-xs.webp" type="image/webp">
+								<source media="(min-width: 767px)" srcset="img/advantage1.png" type="image/png">
+								<source media="(max-width: 768px)" srcset="img/advantage1-xs.png" type="image/png">
+								<img src="img/advantage1.png" class="img-fluid" alt="">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3 order-lg-1 advantage">
+					<div class="advantage-item">
+						<div class="advantage-content">
+							<h3 class="advantage-content__title">Свет как<br class="d-none d-lg-block"> арт-объект</h3>
+							<p class="advantage-content__text">Подойдёт для воплощения<br> любой творческой идеи</p>
+						</div>
+						<div class="advantage-img">
+							@@include('../bem-blocks/_png.html', {
+								'img': 'advantage4',
+								'height': '',
+								'width': '',
+								'class': '',
+							})
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 advantage order-lg-last">
+					<div class="advantage-item">
+						<div class="advantage-content">
+							<h3 class="advantage-content__title">Синхронизация с музыкой</h3>
+							<p class="advantage-content__text">Используйте Twinkly для оформления вечеринок</p>
+						</div>
+						<div class="advantage-img">
+							@@include('../bem-blocks/_png.html', {
+								'img': 'advantage3',
+								'height': '',
+								'width': '',
+								'class': '',
+							})
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-6 advantage">
+					<div class="advantage-item">
+						<div class="advantage-content">
+							<h3 class="advantage-content__title">Дизайн</h3>
+							<p class="advantage-content__text">Изысканные модели, идеально <br> дополняющие ваш интерьер</p>
+						</div>
+						<div class="advantage-img">
+							@@include('../bem-blocks/_png.html', {
+								'img': 'advantage2',
+								'height': '274',
+								'width': '373',
+								'class': '',
+							})
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-12 order-lg-1 advantage">
+					<div class="advantage-item">
+						<div class="advantage-content">
+							<h3 class="advantage-content__title">Атмосфера</h3>
+							<p class="advantage-content__text">Создайте уют, романтику, <br class="">праздничное настроение <br class="">с помощью Twinkly</p>
+						</div>
+						<div class="advantage-img">
+							<picture>
+								<source media="(min-width: 767px)" srcset="img/advantage5.webp" type="image/webp">
+								<source media="(max-width: 768px)" srcset="img/advantage5-xs.webp" type="image/webp">
+								<source media="(min-width: 767px)" srcset="img/advantage5.png" type="image/png">
+								<source media="(max-width: 768px)" srcset="img/advantage5-xs.png" type="image/png">
+								<img src="img/advantage5.png" class="img-fluid" alt="">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 order-lg-1 advantage">
+					<div class="advantage-item">
+						<div class="advantage-content position-absolute">
+							<h3 class="advantage-content__title">Функциональность</h3>
+							<p class="advantage-content__text">Управляйте освещением <br>с помощью приложения, <br>создавайте уникальные эффекты</p>
+						</div>
+						<div class="advantage-img">
+							@@include('../bem-blocks/_png.html', {
+								'img': 'advantage6',
+								'height': '',
+								'width': '',
+								'class': '',
+							})
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="row advantages__row">
-			<div class="col-6 col-lg-3 advantage">
-				<div class="advantage-item">
-					<div class="advantage-content">
-						<h3 class="advantage-content__title">Качество</h3>
-						<p class="advantage-content__text">Долговечные материалы и передовые технологии для безупречной работы</p>
-					</div>
-					<div class="advantage-img">
-						<picture>
-							<source media="(min-width: 767px)" srcset="img/advantage1.webp" type="image/webp">
-							<source media="(max-width: 768px)" srcset="img/advantage1-xs.webp" type="image/webp">
-							<source media="(min-width: 767px)" srcset="img/advantage1.png" type="image/png">
-							<source media="(max-width: 768px)" srcset="img/advantage1-xs.png" type="image/png">
-							<img src="img/advantage1.png" class="img-fluid" alt="">
-						</picture>
+	</section>
+}
+@@if(adv === 'designers') {
+	<section class="section advantages advantages--design">
+		<div class="container">
+			<div class="section-headline">
+				<h2>Забудьте про сложности, <br class="d-none d-md-block">делайте искусство</h2>
+				<div class="h3">Twinkly дарит уникальный опыт полной кастомизации <br class="d-none d-md-block">светового оформления для проектов любого уровня</div>
+			</div>
+			<div class="row advantages__row">
+				<div class="col-6 col-lg-3">
+					<div class="advantage-item bg-dark-subtle">
+						<div class="advantage-content">
+							@@include('../bem-blocks/_sprite.html', {
+								'id': 'infinite',
+								'height': '30',
+								'width': '30',
+								'class': 'advantage-content__icon',
+							})
+							<h3 class="advantage-content__title">От балконов до театров</h3>
+							<p class="advantage-content__text text-white">Масштаб не ограничен, объединяйте любые устройства Twinkly в единую сеть и пользуйтесь как одним</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-6 col-lg-3 order-lg-1 advantage">
-				<div class="advantage-item">
-					<div class="advantage-content">
-						<h3 class="advantage-content__title">Свет как<br class="d-none d-lg-block"> арт-объект</h3>
-						<p class="advantage-content__text">Подойдёт для воплощения<br> любой творческой идеи</p>
-					</div>
-					<div class="advantage-img">
-						@@include('../bem-blocks/_png.html', {
-							'img': 'advantage4',
-							'height': '',
-							'width': '',
-							'class': '',
-						})
+				<div class="col-6 col-lg-3 order-lg-1">
+					<div class="advantage-item bg-dark" style="background-image: url(img/d1.webp);">
+						<div class="advantage-content">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-12 col-sm-6 advantage order-lg-last">
-				<div class="advantage-item">
-					<div class="advantage-content">
-						<h3 class="advantage-content__title">Синхронизация с музыкой</h3>
-						<p class="advantage-content__text">Используйте Twinkly для оформления вечеринок</p>
-					</div>
-					<div class="advantage-img">
-						@@include('../bem-blocks/_png.html', {
-							'img': 'advantage3',
-							'height': '',
-							'width': '',
-							'class': '',
-						})
+				<div class="col-12 col-lg-9">
+					<div class="advantage-item bg-dark" style="background-image: url(img/d2.webp);">
+						<div class="advantage-content">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-6 col-lg-6 advantage">
-				<div class="advantage-item">
-					<div class="advantage-content">
-						<h3 class="advantage-content__title">Дизайн</h3>
-						<p class="advantage-content__text">Изысканные модели, идеально <br> дополняющие ваш интерьер</p>
-					</div>
-					<div class="advantage-img">
-						@@include('../bem-blocks/_png.html', {
-							'img': 'advantage2',
-							'height': '274',
-							'width': '373',
-							'class': '',
-						})
+				<div class="col-6 col-lg-6 order-lg-2">
+					<div class="advantage-item bg-dark" style="background-image: url(img/d3.webp);">
+						<div class="advantage-content">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-6 col-lg-12 order-lg-1 advantage">
-				<div class="advantage-item">
-					<div class="advantage-content">
-						<h3 class="advantage-content__title">Атмосфера</h3>
-						<p class="advantage-content__text">Создайте уют, романтику, <br class="">праздничное настроение <br class="">с помощью Twinkly</p>
-					</div>
-					<div class="advantage-img">
-						<picture>
-							<source media="(min-width: 767px)" srcset="img/advantage5.webp" type="image/webp">
-							<source media="(max-width: 768px)" srcset="img/advantage5-xs.webp" type="image/webp">
-							<source media="(min-width: 767px)" srcset="img/advantage5.png" type="image/png">
-							<source media="(max-width: 768px)" srcset="img/advantage5-xs.png" type="image/png">
-							<img src="img/advantage5.png" class="img-fluid" alt="">
-						</picture>
+				<div class="col-6 col-lg-3 order-lg-1">
+					<div class="advantage-item bg-primary">
+						<div class="advantage-content">
+							@@include('../bem-blocks/_sprite.html', {
+								'id': 'settings',
+								'height': '30',
+								'width': '30',
+								'class': 'advantage-content__icon',
+							})
+							<h3 class="advantage-content__title">Без инструментов</h3>
+							<p class="advantage-content__text text-white">Простое подключение и объединённые линии питания сокращают количество проводов и время на установку</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-12 col-sm-6 order-lg-1 advantage">
-				<div class="advantage-item">
-					<div class="advantage-content position-absolute">
-						<h3 class="advantage-content__title">Функциональность</h3>
-						<p class="advantage-content__text">Управляйте освещением <br>с помощью приложения, <br>создавайте уникальные эффекты</p>
+				<div class="col-6 col-lg-3 order-lg-3">
+					<div class="advantage-item bg-dark-subtle">
+						<div class="advantage-content">
+							@@include('../bem-blocks/_sprite.html', {
+								'id': 'diod',
+								'height': '30',
+								'width': '30',
+								'class': 'advantage-content__icon',
+							})
+							<h3 class="advantage-content__title">До последнего диода</h3>
+							<p class="advantage-content__text text-white">Простое подключение и объединённые линии питания сокращают количество проводов и время на установку</p>
+						</div>
 					</div>
-					<div class="advantage-img">
-						@@include('../bem-blocks/_png.html', {
-							'img': 'advantage6',
-							'height': '',
-							'width': '',
-							'class': '',
-						})
+				</div>
+				<div class="col-6 col-lg-6 order-lg-2">
+					<div class="advantage-item bg-dark-subtle" style="background-image: url(img/d4.webp);">
+						<div class="advantage-content">
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-9 order-lg-4">
+					<div class="advantage-item bg-dark-subtle" style="background-image: url(img/d5.webp);">
+						<div class="advantage-content">
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3 order-lg-3">
+					<div class="advantage-item bg-dark-subtle" style="background-image: url(img/d6.webp);">
+						<div class="advantage-content">
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3 order-lg-4">
+					<div class="advantage-item bg-primary">
+						<div class="advantage-content">
+							@@include('../bem-blocks/_sprite.html', {
+								'id': 'w-settings',
+								'height': '30',
+								'width': '30',
+								'class': 'advantage-content__icon',
+							})
+							<h3 class="advantage-content__title">Из любой точки мира</h3>
+							<p class="advantage-content__text text-white">Управляйте устройствами Twinkly дистанционно из любой точки мира через облачную платформу</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+}

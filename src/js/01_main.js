@@ -172,6 +172,34 @@ $(document).ready(function() {
 		}
 	});
 	
+	var designCarouselMobile = new Swiper(".design-carousel-mobile", {
+		slidesPerView: 'auto',
+		loop: false,
+		spaceBetween: 10,
+		pagination: {
+			el: '.design-carousel-mobile .swiper-pagination',
+			type: 'bullets',
+		},
+		breakpoints: {
+			0: { enabled: true },
+			767: { enabled: false }
+		}
+	});
+	
+	var designCarouselDesktop = new Swiper(".design-carousel-desktop", {
+		slidesPerView: 1,
+		loop: false,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.design-carousel .swiper-button-next',
+			prevEl: '.design-carousel .swiper-button-prev',
+		},
+		breakpoints: {
+			0: { enabled: false },
+			767: { enabled: true }
+		}
+	});
+	
 	var productFilterSlider = new Swiper(".product-filter-slider", {
 		slidesPerView: 1,
 		loop: false,
@@ -183,6 +211,28 @@ $(document).ready(function() {
 		breakpoints: {
 			0: { enabled: true },
 			767: { enabled: false }
+		}
+	});
+	
+	var combinationSlider = new Swiper(".combination-slider", {
+		slidesPerView: 1,
+		loop: false,
+		spaceBetween: 10,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		navigation: {
+			nextEl: '.combination-slider .swiper-button-next',
+			prevEl: '.combination-slider .swiper-button-prev',
+		},
+		pagination: {
+			el: '.combination-slider .swiper-pagination',
+			type: 'bullets',
+		},
+		breakpoints: {
+			0: { pagination: { enabled: true} },
+			767: { pagination: { enabled: false} }
 		}
 	});
 
@@ -274,23 +324,23 @@ $('.pin-btn').on('click', function() {
 let videoSrc;
 
 // Add click event listener to all elements with class "video-btn"
-document.querySelectorAll('.video-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    // Get the video source from the data-src attribute
-    videoSrc = button.dataset.src;
-  });
-});
+var videoBtns = document.querySelectorAll('.video-btn')
+if(videoBtns.length > 0) {
+	videoBtns.forEach(button => {
+		button.addEventListener('click', () => {
+			videoSrc = button.dataset.src;
+		});
+	});
+}
 
 // Add event listener for when the modal is opened
 document.getElementById('modalVideo').addEventListener('shown.bs.modal', () => {
-  // Update the video source with autoplay and other options
-  document.getElementById('video').src = videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0";
+	document.getElementById('video').src = videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0";
 });
 
 // Add event listener for when the modal is closed
 document.getElementById('modalVideo').addEventListener('hide.bs.modal', () => {
-  // Stop the video by resetting the source
-  document.getElementById('video').src = videoSrc;
+	document.getElementById('video').src = videoSrc;
 });
 
 
@@ -300,3 +350,35 @@ $('.options-item').on('mouseover', function() {
 	optImages.removeClass('active');
 	$(optImages[$(this).index()]).addClass('active')
 })
+
+//combination presentation section
+const checkboxes = document.querySelectorAll('.combination input[type="checkbox"]');
+let selectedValues = [];
+
+checkboxes.forEach(checkbox => {
+	checkbox.addEventListener('change', () => {
+		let currentImg = checkbox.closest('.combination-item').querySelector('.combination-item__img img');
+		let imgDataName = currentImg.dataset.img;
+		let imgFileName
+		if (checkbox.checked) {
+			selectedValues.push(parseInt(checkbox.value));
+		} else {
+			selectedValues = selectedValues.filter(value => value !== parseInt(checkbox.value));
+		}
+
+		selectedValues.sort((a, b) => a - b);
+
+		if (selectedValues.length === 1) {
+			imgFileName = imgDataName+'-'+selectedValues[0];
+		} else if (selectedValues.length === 2) {
+			imgFileName = imgDataName+'-'+selectedValues.join('-');
+		} else if (selectedValues.length === 3) {
+			imgFileName = imgDataName+'-'+selectedValues.join('-');
+		} else {
+			imgFileName = imgDataName;
+		}
+		console.log(`img/${imgFileName}.webp`);
+
+		// currentImg.src = `img/${imgFileName}.webp`;
+	});
+});
