@@ -45,20 +45,20 @@ picture, img {
 	background-size: cover;
 	background-position: center;
 	padding: 40px 0;
-	@include from-md() { padding: 50px 0 ; }
+	@include from-md() { padding: 70px 0 ; }
 	&-big {
 		padding: 40px 0;
 		@include from-md() { padding: 70px 0 ; }
 	}
 	&-headline {
-		margin-bottom: 28px;
-		@include from-md() { margin-bottom: 38px; }
-		h2 {
-			margin-bottom: 14px;
-			@include from-md() {
-				margin-bottom: 30px;
-			}
-		}
+		margin-bottom: 40px;
+		@include from-md() { margin-bottom: 50px; }
+		// h2 {
+		// 	margin-bottom: 14px;
+		// 	@include from-md() {
+		// 		margin-bottom: 30px;
+		// 	}
+		// }
 		h3, .h3 {
 			font-size: 16px;
 			line-height: 1.2;
@@ -76,9 +76,21 @@ picture, img {
 	align-items: center;
 	text-decoration: none;
 	color: var(--bs-primary);
+	font-size: 16px;
+	margin-bottom: 10px;
+	gap: 4px;
 	svg {
-		height: 1.1em;
-		width: 1.1em;
+		height: 20px;
+		width: 20px;
+	}
+	@include from-sm() {
+		font-size: 20px;
+		margin-bottom: 20px;
+		gap: 2px;
+		svg {
+			height: 24px;
+			width: 24px;
+		}
 	}
 }
 
@@ -144,12 +156,12 @@ picture, img {
 }
 
 h2, .h2 {
-	margin-bottom: 14px;
+	margin-bottom: 24px;
 	font-size: 32px;
 	line-height: 1.12;
 	@include from-md() {
 		font-size: 54px;
-		margin-bottom: 30px;
+		margin-bottom: 50px;
 	}
 }
 
