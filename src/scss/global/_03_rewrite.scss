@@ -25,8 +25,10 @@
 }
 
 input {
+	appearance: none;
 	&[type=email],
 	&[type=text],
+	&[type=password],
 	&[type=tel] {
 		height: 34px;
 		border-width: 1px;
