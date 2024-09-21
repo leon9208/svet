@@ -1,0 +1,36 @@
+<section class="section">
+	<div class="container">
+		<div class="section-headline">
+			<div class="d-flex align-items-center justify-content-between flex-wrap gap-4">
+				<h2 class="m-0">@@title</h2>
+				@@if(link) {
+					@@include('../bem-blocks/_page-link.html', {
+						'text': 'Перейти в каталог',
+						'class': ''
+					})
+				}
+			</div>
+		</div>
+		
+
+		<div class="swiper product-list-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide swiper-slide-auto">
+					@@include('../bem-blocks/_product.html', {'badge': false})
+				</div>
+				<div class="swiper-slide swiper-slide-auto">
+					@@include('../bem-blocks/_product.html', {'badge': false})
+				</div>
+				<div class="swiper-slide swiper-slide-auto">
+					@@include('../bem-blocks/_product.html', {'badge': false})
+				</div>
+				<div class="swiper-slide swiper-slide-auto">
+					@@include('../bem-blocks/_product.html', {'badge': false})
+				</div>
+				<div class="swiper-slide swiper-slide-auto">
+					@@include('../bem-blocks/_product.html', {'badge': false})
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
