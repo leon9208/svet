@@ -6,11 +6,15 @@
 		color: inherit;
 	}
 }
-.offcanvas {
-	--bs-offcanvas-padding-y: 2rem;
-	--bs-offcanvas-bg: #131842;
-	transition: var(--bs-transition);
+
+.p {
+	&-sm {
+		@include from-sm() {
+		&-7 { padding: 70px 0 !important; }
+		}
+	}
 }
+
 .outline-none {
 	outline: none;
 }
