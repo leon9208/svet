@@ -362,7 +362,7 @@ $('.pin-btn').on('click', function() {
 let videoSrc;
 
 // Add click event listener to all elements with class "video-btn"
-var videoBtns = document.querySelectorAll('.video-btn')
+var videoBtns = document.querySelectorAll('[data-video-btn]')
 if(videoBtns.length > 0) {
 	videoBtns.forEach(button => {
 		button.addEventListener('click', () => {
@@ -434,6 +434,19 @@ if(collapseBtn.length > 0) {
 				btn.classList.add('isopen')
 				btn.innerHTML = 'Скрыть'
 			}
+		})
+	})
+};
+
+// play video-bg
+var heroVideoBtn = document.querySelectorAll('.hero-video-btn');
+
+if(heroVideoBtn.length > 0) {
+	heroVideoBtn.forEach(btn => {
+		btn.addEventListener('click', () => {
+			btn.style.display = 'none';
+			document.getElementById(btn.dataset.videoId).style.display = 'block';
+			document.getElementById(btn.dataset.videoId).play()
 		})
 	})
 }
