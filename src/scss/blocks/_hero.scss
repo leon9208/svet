@@ -146,7 +146,7 @@
 			z-index: 1;
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 39.03%, #161418 61.16%);
 			@include from-sm() {
-				background: linear-gradient(270deg, #161418 50%, rgba(22, 20, 24, 0) 100%);
+				background: linear-gradient(270deg, #161418 38.67%, rgba(22, 20, 24, 0) 100%);
 			}
 		}
 		&__media{
@@ -174,7 +174,7 @@
 				display: none;
 			}
 			@include from-sm() {
-				width: 50%;
+				width: 65%;
 			}
 		}
 		&__content {
