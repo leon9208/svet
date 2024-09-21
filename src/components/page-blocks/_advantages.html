@@ -17,7 +17,7 @@
 								<source media="(max-width: 768px)" srcset="img/advantage1-xs.webp" type="image/webp">
 								<source media="(min-width: 767px)" srcset="img/advantage1.png" type="image/png">
 								<source media="(max-width: 768px)" srcset="img/advantage1-xs.png" type="image/png">
-								<img src="img/advantage1.png" class="img-fluid" alt="">
+								<img src="img/advantage1.png" class="img-fluid" alt="" loading="lazy">
 							</picture>
 						</div>
 					</div>
@@ -82,7 +82,7 @@
 								<source media="(max-width: 768px)" srcset="img/advantage5-xs.webp" type="image/webp">
 								<source media="(min-width: 767px)" srcset="img/advantage5.png" type="image/png">
 								<source media="(max-width: 768px)" srcset="img/advantage5-xs.png" type="image/png">
-								<img src="img/advantage5.png" class="img-fluid" alt="">
+								<img src="img/advantage5.png" class="img-fluid" alt="" loading="lazy">
 							</picture>
 						</div>
 					</div>
@@ -204,6 +204,156 @@
 							})
 							<h3 class="advantage-content__title">Из любой точки мира</h3>
 							<p class="advantage-content__text text-white">Управляйте устройствами Twinkly дистанционно из любой точки мира через облачную платформу</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+}
+
+@@if(adv === 'product') {
+	<section class="section advantages advantages--product">
+		<div class="container">
+			<div class="section-headline">
+				<h2>Больше, чем гирлянда</h2>
+			</div>
+			<div class="row advantages__row">
+				<div class="col-12">
+					<div class="advantage-item">
+						<div class="advantage-bg">
+							<picture>
+								<source media="(max-width: 767.98px)" srcset="img/product-advantage-1-xs.webp" type="image/webp">
+								<source media="(max-width: 767.98px)" srcset="img/product-advantage-1-xs.png" type="image/png">
+								<source media="(min-width: 768px)" srcset="img/product-advantage-1.webp" type="image/webp">
+								<source media="(min-width: 768px)" srcset="img/product-advantage-1.png" type="image/png">
+								<img src="img/product-advantage-1.png" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="row align-items-center h-100">
+							<div class="col-6 ms-auto">
+								<div class="advantage-content">
+									<div class="advantage-content__headline m-0">Уникальные формы для вашего интерьера</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="advantage-item justify-content-end">
+						<div class="advantage-bg">
+							<picture>
+								<source media="(max-width: 767.98px)" srcset="img/product-advantage-2-xs.webp" type="image/webp">
+								<source media="(max-width: 767.98px)" srcset="img/product-advantage-2-xs.png" type="image/png">
+								<source media="(min-width: 768px)" srcset="img/product-advantage-2.webp" type="image/webp">
+								<source media="(min-width: 768px)" srcset="img/product-advantage-2.png" type="image/png">
+								<img src="img/product-advantage-2.png" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="advantage-content">
+							<div class="advantage-content__title m-0">От мягкого свечения до ослепительного сияния</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="advantage-item justify-content-end">
+						<div class="advantage-bg">
+							<picture>
+								<source media="(max-width: 767.98px)" srcset="img/product-advantage-3-xs.webp" type="image/webp">
+								<source media="(max-width: 767.98px)" srcset="img/product-advantage-3-xs.png" type="image/png">
+								<source media="(min-width: 768px)" srcset="img/product-advantage-3.webp" type="image/webp">
+								<source media="(min-width: 768px)" srcset="img/product-advantage-3.png" type="image/png">
+								<img src="img/product-advantage-3.png" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="advantage-content">
+							<div class="advantage-content__title m-0">Миллионы цветов и тысячи эффектов</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12">
+					<div class="advantage-item">
+						<div class="advantage-bg">
+							<picture>
+								<source media="(max-width: 767.98px)" srcset="img/product-advantage-4-xs.webp" type="image/webp">
+								<source media="(max-width: 767.98px)" srcset="img/product-advantage-4-xs.png" type="image/png">
+								<source media="(min-width: 768px)" srcset="img/product-advantage-4.webp" type="image/webp">
+								<source media="(min-width: 768px)" srcset="img/product-advantage-4.png" type="image/png">
+								<img src="img/product-advantage-4.png" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="row align-items-center h-100">
+							<div class="col-6">
+								<div class="advantage-content">
+									<div class="advantage-content__headline d-none d-md-block">Что создать сегодня?</div>
+									<div class="advantage-content__title fs-lg-4 m-0">Никаких ограничений <br>для вашего воображения</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+}
+
+@@if(adv === 'advantage-card') {
+	<section class="section">
+		<div class="container">
+			<div class="row advantages__row">
+				<div class="col-6 col-lg-3">
+					<div class="advantage-card">
+						@@include('../bem-blocks/_sprite.html', {
+							'id': 'advantage-card-1',
+							'height': '71',
+							'width': '71',
+							'class': 'advantage-card__icon text-white',
+						})
+						<div class="advantage-card__content">
+							<h3 class="advantage-card__title">Качество</h3>
+							<p class="advantage-card__text">Долговечные материалы и передовые технологии для безупречной работы</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="advantage-card">
+						@@include('../bem-blocks/_sprite.html', {
+							'id': 'advantage-card-2',
+							'height': '71',
+							'width': '71',
+							'class': 'advantage-card__icon text-white',
+						})
+						<div class="advantage-card__content">
+							<h3 class="advantage-card__title">Мобильность</h3>
+							<p class="advantage-card__text">Установка на любую поверхность без инструментов</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="advantage-card">
+						@@include('../bem-blocks/_sprite.html', {
+							'id': 'advantage-card-3',
+							'height': '71',
+							'width': '71',
+							'class': 'advantage-card__icon text-white',
+						})
+						<div class="advantage-card__content">
+							<h3 class="advantage-card__title">Безопасность</h3>
+							<p class="advantage-card__text">Встроенные системы защиты от перегрузки и короткого замыкания</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="advantage-card">
+						@@include('../bem-blocks/_sprite.html', {
+							'id': 'advantage-card-4',
+							'height': '71',
+							'width': '71',
+							'class': 'advantage-card__icon text-white',
+						})
+						<div class="advantage-card__content">
+							<h3 class="advantage-card__title">Экономия</h3>
+							<p class="advantage-card__text">Светодиоды низкого напряжения без потери яркости свечения</p>
 						</div>
 					</div>
 				</div>

@@ -274,11 +274,11 @@
 	&-name {
 		font-size: 16px;
 		line-height: 1.3;
-		margin-bottom: 8px;
+		margin-bottom: 12px;
 		text-decoration: none;
 		color: var(--bs-white);
 		@include from-sm() {
-			margin-bottom: 12px;
+			margin-bottom: 20px;
 			font-size: 22px;
 		}
 	}
@@ -316,6 +316,201 @@
 		&__back {
 			opacity: 0;
 			visibility: hidden;
+		}
+	}
+	&-description {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+		padding: 23px;
+		background-color: var(--bs-body-bg);
+		box-shadow: 0 0 10px rgba(var(--bs-primary-rgb), 0.4);
+		border-radius: 10px;
+		@include from-sm() {
+			border-radius: 15px;
+			box-shadow: 0 0 20px rgba(var(--bs-primary-rgb), 0.4);
+			padding: 30px;
+		}
+		&__btn {
+			position: relative;
+			order: 1;
+			background-color: transparent;
+			border: 0;
+			color: var(--bs-primary);
+			align-items: center;
+			font-size: 16px;
+			padding: 0;
+			margin: 0;
+			display: none;
+			@include xs() {
+				display: inline-flex;
+			}
+			&::after {
+				content: '';
+				height: 20px;
+				width: 20px;
+				flex: none;
+				background-size: contain;
+				background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 8L9.65685 13.6569L15.3137 8' stroke='%23AA6CFF'/%3E%3C/svg%3E%0A");
+			}
+			&.isopen {
+				&::after {
+					transform: rotate(180deg);
+				}
+				& ~ .product-description__content {
+					max-height: 100%;
+				}
+			}
+		}
+		&__content {
+			line-height: 1.2;
+			font-size: 16px;
+			overflow: hidden;
+			max-height: 190px;
+			@include from-xs() {
+				max-height: unset;
+			}
+			@include from-md() {
+				font-size: 22px;
+				line-height: 1.3;
+			}
+			p {
+				line-height: inherit;
+				font-size: inherit;
+			}
+		}
+	}
+	&-table {
+		margin-bottom: 24px;
+		@include from-sm() {
+			margin-bottom: 50px;
+		}
+		h4 {
+			margin-bottom: 24px;
+			@include from-sm() {
+				margin-bottom: 50px;
+			}
+		}
+		&__list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			font-size: 12px;
+			color: #C6C6C6;
+			@include sm() {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+			@include from-sm() {
+				font-size: 16px;
+			}
+			li {
+				position: relative;
+				display: flex;
+				@include from-sm() {
+					border-top: 1px dashed;
+					border-bottom: 1px dashed;
+					span {
+						padding: 12px 16px;
+						&:nth-child(1) {
+							max-width: 420px;
+							width: 100%;
+							border-right: 1px solid;
+						}
+					}
+				}
+				@include sm() {
+					align-items: flex-end;
+					justify-content: space-between;
+					padding: 0 12px;
+					span {
+						&:nth-child(1) {
+							display: flex;
+							flex-grow: 1;
+							&::after {
+								content: '';
+								border-bottom: 1px dashed rgba(#C6C6C6, 0.4);
+								flex-grow: 1;
+								margin: 0 4px;
+							}
+						}
+						&:nth-child(2) {
+							max-width: 124px;
+						}
+					}
+				}
+			}
+		}
+	}
+	&-info {
+		padding-top: 40px;
+		@include from-sm() {
+			padding: 30px;
+		}
+		&__title {
+			margin-bottom: 20px;
+			@include from-sm() {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	&-specifications {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 30px;
+		@include from-sm() {
+			gap: 40px;
+		}
+		&__price {
+			font-size: 20px;
+			@include from-sm() {
+				font-size: 30px;
+			}
+		}
+		&__footer {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			gap: 30px;
+			@include xs() {
+				.btn {
+					flex-grow: 1
+				}
+			}
+			
+		}
+		&__switches {
+			display: flex;
+			flex-direction: column;
+			gap: 14px;
+		}
+	}
+	&-carousel {
+		padding-bottom: 30px;
+		border-radius: 10px;
+		background-color: var(--bs-dark);
+		--swiper-pagination-bottom: 10px;
+		@include from-sm() {
+			--swiper-pagination-bottom: 15px;
+			padding-bottom: 0;
+			border-radius: 14px;
+		}
+		.swiper-slide {
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	&-list {
+		&-slider {
+			@include sm() {
+				overflow: unset;
+			}
 		}
 	}
 }

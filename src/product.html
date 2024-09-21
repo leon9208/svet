@@ -1,0 +1,299 @@
+@@include('components/page-blocks/_head.html',{
+	"lang":"ru",
+	"title":"Страница товара",
+	"description":"Страница товара",
+	"keywords":"",
+	"favicon":"img/favicons/favicon",
+	"body-class": "inner",
+	"theme": ''
+
+})
+<main class="main">
+	<!-- product-hero -->
+	<div class="hero-product">
+		<div class="hero-product__media">
+			<picture>
+				<source media="(min-width: 767px)" srcset="img/product-bg.webp" type="image/webp">
+				<source media="(max-width: 768px)" srcset="img/product-bg-xs.webp" type="image/webp">
+				<source media="(min-width: 767px)" srcset="img/product-bg.jpg" type="image/jpeg">
+				<source media="(max-width: 768px)" srcset="img/product-bg-xs.jpg" type="image/jpeg">
+				<img src="img/product-bg.jpg" class="img-fluid" alt="">
+			</picture>
+			
+		</div>
+		<div class="container">
+			<div class="row align-items-sm-center">
+				<div class="col-md-6 d-none d-md-block">
+					<div class="position-relative h-100 w-100">
+						<button class="video-btn" type="button" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-bs-target="#modalVideo"></button>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="hero-product__content">
+						<div class="hero-product-head">
+							<h1 class="m-0 h2">Candies</h1>
+							<h3 class="m-0">Stars</h3>
+						</div>
+						<span class="fw-light fs-9 fs-sm-6">SKU: TWKC100RGB-GTWS</span>
+						<div class="hero-product-body">
+							<div class="product-specifications__switches">
+								<div class="switches">
+									<span>Цвет провода:</span>
+									<label class="switch">
+										<input type="radio" name="pr_color" value="green" class="visually-hidden" checked>
+										<i></i>
+										<span>зелёный</span>
+									</label>
+									<label class="switch">
+										<input type="radio" name="pr_color" value="transparent" class="visually-hidden">
+										<i></i>
+										<span>прозрачный</span>
+									</label>
+								</div>
+								<div class="switches">
+									<span>Длина гирлянды:</span>
+									<label class="switch">
+										<input type="radio" name="pr_length" value="green" class="visually-hidden" checked>
+										<i></i>
+										<span>6 м</span>
+									</label>
+									<label class="switch">
+										<input type="radio" name="pr_length" value="transparent" class="visually-hidden">
+										<i></i>
+										<span>2x6 м</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="hero-product-footer">
+							@@include('./components/bem-blocks/_page-link.html', {
+								'text': 'Все характеристики',
+								'class': 'page-link--xs',
+							})
+							<div class="hero-product-footer__row">
+								<div class="product-specifications__price">6 199 ₽</div>
+								<button class="btn btn-light">В корзину</button>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- product description -->
+	<div class="section">
+		<div class="container">
+			<div class="product-description">
+				<button class="product-description__btn">Подробнее</button>
+				<div class="product-description__content">
+					<p class="m-0">Умные декоративные светильники Twinkly Candies в форме звезд привнесут очарование в любое жилое пространство твоего дома благодаря необычайной яркости, настраиваемым эффектам, которые можно отобразить с телефона, и легкой портативной конструкции. Хочешь ли ты создать уютное свечение в детской комнате, создать завораживающую потоковую установку, придать праздничному торжеству новый импульс или добавить индивидуальный штрих к своему интерьеру. Создай сцену с помощью Candies.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- advantages -->
+	@@include('components/page-blocks/_advantages.html', { 'adv': 'product'})
+	<section class="section">
+		<div class="container">
+			<div class="section-headline">
+				<h2>Candies Stars</h2>
+			</div>
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<div class="swiper product-carousel">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								@@include('components/bem-blocks/_png.html', {
+									'img': 'product-image',
+									'height': '520',
+									'width': '570',
+									'class': '',
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('components/bem-blocks/_png.html', {
+									'img': 'product-image',
+									'height': '520',
+									'width': '570',
+									'class': '',
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('components/bem-blocks/_png.html', {
+									'img': 'product-image',
+									'height': '520',
+									'width': '570',
+									'class': '',
+								})
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="product-info">
+						<h3 class="product-info__title">Характеристики</h3>
+	
+						<div class="product-specifications">
+							<table>
+								<tbody>
+									<tr><td>Схема капель</td><td>10 × 2-4-6-2-5</td></tr>
+									<tr><td class="pe-4 pe-sm-5">Расширяемость</td><td>No</td></tr>
+									<tr><td class="pe-4 pe-sm-5">Диаметр лампы мм</td><td>5.0</td></tr>
+									<tr><td class="pe-4 pe-sm-5">Тип лампы</td><td>Clear + Diffused flat lens</td></tr>
+									<tr><td class="pe-4 pe-sm-5">Тип светодиода</td><td>Addressable LED</td></tr>
+									<tr><td class="pe-4 pe-sm-5">Заменяемые светодиоды</td><td>No</td></tr>
+								</tbody>
+							</table>
+							@@include('./components/bem-blocks/_page-link.html', {
+								'text': 'Все характеристики',
+								'class': '',
+							})
+							<div class="product-specifications__switches">
+								<div class="switches">
+									<span>Цвет провода:</span>
+									<label class="switch">
+										<input type="radio" name="color" value="green" class="visually-hidden" checked>
+										<i></i>
+										<span>зелёный</span>
+									</label>
+									<label class="switch">
+										<input type="radio" name="color" value="transparent" class="visually-hidden">
+										<i></i>
+										<span>прозрачный</span>
+									</label>
+								</div>
+								<div class="switches">
+									<span>Длина гирлянды:</span>
+									<label class="switch">
+										<input type="radio" name="length" value="green" class="visually-hidden" checked>
+										<i></i>
+										<span>6 м</span>
+									</label>
+									<label class="switch">
+										<input type="radio" name="length" value="transparent" class="visually-hidden">
+										<i></i>
+										<span>2x6 м</span>
+									</label>
+								</div>
+							</div>
+							<div class="product-specifications__footer">
+								<div class="product-specifications__price">6 199 ₽</div>
+								<button class="btn btn-light">В корзину</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- product presentation -->
+	<section class="section">
+		<div class="container">
+			<div class="text-md-center">
+				<h2 class="m-0">Управляйте освещением <br class="d-none d-md-block">с помощью приложения</h2>
+			</div>
+			<div class="section">
+				<div class="row page-row justify-content-center">
+					<div class="col-6 col-md-auto">
+						<a href="#">
+							<picture>
+								<source srcset="img/app-img-1.webp" type="image/webp">
+								<img src="img/app-img-1.png" class="img-fluid" width="268" height="80" alt="" loading="lazy">
+							</picture>
+						</a>
+					</div>
+					<div class="col-6 col-md-auto">
+						<a href="#">
+							<picture>
+								<source srcset="img/app-img-2.webp" type="image/webp">
+								<img src="img/app-img-2.png" class="img-fluid" width="268" height="80" alt="" loading="lazy">
+							</picture>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row page-row">
+				<div class="col-12">
+					<div class="page-card page-card--big">
+						<div class="page-card__bg">
+							<picture>
+								<source media="(max-width: 767.98px)" srcset="img/app-img-0-xs.webp" type="image/webp">
+								<source media="(max-width: 767.98px)" srcset="img/app-img-0-xs.png" type="image/png">
+								<source media="(min-width: 768px)" srcset="img/app-img-0.webp" type="image/webp">
+								<source media="(min-width: 768px)" srcset="img/app-img-0.png" type="image/png">
+								<img src="img/app-img-0.png" alt="" loading="lazy">
+							</picture>
+						</div>
+						<div class="row align-items-end align-items-md-center h-100">
+							<div class="col-md-6 ms-md-auto">
+								<h3 class="page-card__headline position-relative m-0">Простое приложение — бесконечные возможности</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-md-4">
+					<div class="page-card pb-0">
+						<div class="page-card__conent">
+							<h3 class=" page-card__title m-0">Объединяйте в единую сеть</h3>
+						</div>
+						<div class="page-card__img mt-auto d-flex justify-content-center">
+							<picture class="w-75">
+								<source srcset="img/ph-1.webp" type="image/webp">
+								<img src="img/ph-1.png" class="img-fluid" width="190" alt="" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-md-4">
+					<div class="page-card pb-0">
+						<div class="page-card__conent">
+							<h3 class=" page-card__title m-0">Настраивайте с точностью до диода</h3>
+						</div>
+						<div class="page-card__img mt-auto d-flex justify-content-center">
+							<picture class="w-75">
+								<source srcset="img/ph-2.webp" type="image/webp">
+								<img src="img/ph-1.png" class="img-fluid" width="190" alt="" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-md-4 d-none d-md-block">
+					<div class="page-card pb-0">
+						<div class="page-card__conent">
+							<h3 class=" page-card__title m-0">Выбирайте эффекты и создавайте новые</h3>
+						</div>
+						<div class="page-card__img mt-auto d-flex justify-content-center">
+							<picture class="w-75">
+								<source srcset="img/ph-3.webp" type="image/webp">
+								<img src="img/ph-1.png" class="img-fluid" width="190" alt="" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- page banner -->
+	 <div class="section">
+		<div class="page-bnr" style="background-image: url(img/brn.webp);">
+			<div class="container">
+				<h2 class="page-bnr__title">Тут какая-то <br>подборка</h2>
+				@@include('./components/bem-blocks/_page-link.html', {
+					'text': 'Смотреть подборку',
+					'class': 'd-inline-flex d-sm-none',
+				})
+				<a href="#" class="btn btn-sm btn-white d-none d-sm-inline-flex">Смотреть подборку</a>
+			</div>
+		</div>
+	 </div>
+	<!-- advantages card -->
+	@@include('components/page-blocks/_advantages.html', { 'adv': 'advantage-card'})
+	<!-- product specifications -->
+	 @@include('components/page-blocks/_product-table.html')
+	<!-- recommended product -->
+	 @@include('components/page-blocks/_recommendations.html', { 'title' : 'Можно засмотреться', 'link': true})
+
+</main>
+@@include('components/page-blocks/_footer.html')

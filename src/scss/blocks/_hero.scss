@@ -6,7 +6,6 @@
 	&-wrap {
 		position: relative;
 		min-height: 100vh;
-		// padding-top: 100px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -93,6 +92,16 @@
 				top: 0;
 				left: 0;
 			}
+			&--overlay {
+				&::after {
+					content: '';
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					background-color: rgba(0,0,0, 0.6);
+					pointer-events: none;
+				}
+			}
 		}
 		&__title {
 			position: relative;
@@ -100,7 +109,6 @@
 			letter-spacing: 0.03em;
 			text-transform: uppercase;
 			text-align: center;
-			color: #FFF8BA;
 			font-size: 10vw;
 			font-weight: 600;
 			@include from-sm() {
@@ -111,6 +119,92 @@
 		}
 		@include from-sm() {
 			min-height: calc(100vh - 100px);
+		}
+	}
+	&-product {
+		position: relative;
+		display: flex;
+		align-items: end;
+		padding: 40px 0;
+		// min-height: calc(100vh - 80px);
+		min-height: 590px;
+		@include from-sm() {
+			min-height: 640px;
+			align-items: center;
+		// 	min-height: calc(100vh - 100px);
+		}
+		.row {
+			position: relative;
+			z-index: 2;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 39.03%, #161418 61.16%);
+			@include from-sm() {
+				background: linear-gradient(270deg, #161418 38.67%, rgba(22, 20, 24, 0) 100%);
+			}
+		}
+		&__media{
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			picture, img {
+				height: 100%;
+				width: 100%;
+			}
+			img {
+				object-fit: cover;
+				object-position: center center;
+				@include from-sm() {
+					object-position: center left
+				}
+			}
+		}
+		&__content {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
+		}
+		&-head {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px !important;
+			width: 100%;
+			@include from-sm() {
+				gap: 20px !important;
+			}
+		}
+		&-body {
+			width: 100%;
+			@include from-sm() {
+				margin-bottom: 47px;
+			}
+		}
+		&-footer {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			&__row {
+				display: flex;
+				align-items: center;
+				gap: 30px;
+			}
+			@include xs() {
+				.btn {
+					flex-grow: 1;
+				}
+			}
 		}
 	}
 }
