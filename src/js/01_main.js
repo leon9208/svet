@@ -116,6 +116,7 @@ $(document).ready(function() {
 		pagination: {
 			el: '.stories-slider .swiper-pagination',
 			type: 'bullets',
+			clickable: true,
 		},
 		coverflowEffect: {
 			rotate: 0,
@@ -139,16 +140,50 @@ $(document).ready(function() {
 		}
 	});
 	
+	// product-card slider
 	var productSlider = new Swiper(".product-slider", {
 		slidesPerView: 1,
 		loop: false,
 		pagination: {
 			el: '.product-slider .swiper-pagination',
 			type: 'bullets',
+			clickable: true,
 		},
 		breakpoints: {
 			0: { enabled: true },
 			767: { enabled: false }
+		}
+	});
+	
+	// big product carousel
+	var productSlider = new Swiper(".product-carousel", {
+		slidesPerView: 1,
+		loop: false,
+		pagination: {
+			el: '.product-carousel .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+	
+	// recommended products
+	var productListSlider = new Swiper(".product-list-slider", {
+		slidesPerView: 4,
+		loop: false,
+		spaceBetween: 20,
+		breakpoints: {
+			0: { 
+				slidesPerView: 2,
+				spaceBetween: 10, 
+			},
+			768: { 
+				slidesPerView: 3,
+				spaceBetween: 15, 
+			},
+			992: { 
+				slidesPerView: 4,
+				spaceBetween: 20, 
+			}
 		}
 	});
 	
@@ -179,6 +214,7 @@ $(document).ready(function() {
 		pagination: {
 			el: '.design-carousel-mobile .swiper-pagination',
 			type: 'bullets',
+			clickable: true,
 		},
 		breakpoints: {
 			0: { enabled: true },
@@ -207,6 +243,7 @@ $(document).ready(function() {
 		pagination: {
 			el: '.product-filter-slider .swiper-pagination',
 			type: 'bullets',
+			clickable: true,
 		},
 		breakpoints: {
 			0: { enabled: true },
@@ -229,6 +266,7 @@ $(document).ready(function() {
 		pagination: {
 			el: '.combination-slider .swiper-pagination',
 			type: 'bullets',
+			clickable: true,
 		},
 		breakpoints: {
 			0: { pagination: { enabled: true} },
@@ -382,3 +420,20 @@ checkboxes.forEach(checkbox => {
 		// currentImg.src = `img/${imgFileName}.webp`;
 	});
 });
+
+// product description collapse
+var collapseBtn = document.querySelectorAll('.product-description__btn');
+
+if(collapseBtn.length > 0) {
+	collapseBtn.forEach(btn => {
+		btn.addEventListener('click', () => {
+			if(btn.classList.contains('isopen')) {
+				btn.classList.remove('isopen')
+				btn.innerHTML = 'Подробнее'
+			} else {
+				btn.classList.add('isopen')
+				btn.innerHTML = 'Скрыть'
+			}
+		})
+	})
+}
