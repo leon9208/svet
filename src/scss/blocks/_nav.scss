@@ -5,10 +5,10 @@
 			--bs-nav-link-color: var(--bs-white);
 			--bs-nav-link-hover-color: var(--bs-primary);
 			--bs-navbar-active-color: var(--bs-primary);
-			--bs-nav-link-font-size: 22px;
-			transition: all .15s ease-in-out;
+			--bs-nav-link-font-size: 16px;
+			transition: color .15s ease-in-out;
 			@include from-sm() {
-				--bs-nav-link-font-size: 16px;
+				--bs-nav-link-font-size: 22px;
 			}
 			&.active {
 				--bs-nav-link-font-weight: 700;
