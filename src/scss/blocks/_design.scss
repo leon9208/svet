@@ -3,15 +3,11 @@
 		&-desktop {
 			.swiper-slide {
 				overflow: hidden;
-				// width: 290px;
 				border-radius: 15px;
 			}
 		}
 		&-mobile {
-			--swiper-pagination-bullet-size: 11px;
 			--swiper-pagination-bottom: 16px;
-			--swiper-pagination-color: #DFDFDF;
-			--swiper-pagination-bullet-inactive-color: #C6C6C6;
 			--swiper-pagination-bullet-inactive-opacity: 0.7;
 			overflow: unset;
 			.swiper-slide {

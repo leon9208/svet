@@ -2,15 +2,11 @@
 	<div class="container">
 		<div class="section-headline d-flex justify-content-between align-items-sm-center flex-column row-gap-4 flex-sm-row">
 			<h2 class="m-0">Блог</h2>
-			<a href="#" class="d-flex align-items-center text-decoration-none fs-6 fs-sm-5">
-				<span>Все статьи</span>
-				@@include('../bem-blocks/_sprite.html', {
-					'id': 'arr-right',
-					'height': '20',
-					'width': '20',
-					'class': '',
-				})
-			</a>
+			@@include('../bem-blocks/_page-link.html', {
+				'text': 'Все статьи',
+				'url': 'blog.html',
+				'class': ''
+			})
 		</div>
 
 		<div class="swiper blog-slider">
