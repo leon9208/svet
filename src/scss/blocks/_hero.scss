@@ -105,15 +105,15 @@
 		}
 		&__title {
 			position: relative;
-			line-height: 112%;
+			line-height: 1.12;
 			letter-spacing: 0.03em;
 			text-transform: uppercase;
 			text-align: center;
-			font-size: 10vw;
+			font-size: 8vw;
 			font-weight: 600;
-			@include from-sm() {
+			color: var(--bs-white);
+			@include from-md() {
 				font-weight: 400;
-				color: var(--bs-white);
 				font-size: 89px;
 			}
 		}
