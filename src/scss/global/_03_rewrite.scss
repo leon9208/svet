@@ -396,10 +396,6 @@ input {
 }
 
 .swiper {
-	--swiper-pagination-bullet-inactive-opacity: 1;
-	--swiper-pagination-bullet-size: 11px;
-	--swiper-pagination-bullet-inactive-color: var(--bs-body-bg);
-	--swiper-pagination-color: var(--bs-dark-bg-subtle);
 	&-control {
 		position: relative;
 		display: flex;
