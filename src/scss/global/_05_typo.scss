@@ -14,11 +14,32 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-size: 32px;
-    @include from-sm() { font-size: 36px; }
-    @include from-md() { font-size: 40px; }
-    @include from-lg() { font-size: 48px; }
-    @include from-xl() { font-size: 54px; }
+	margin-bottom: 24px;
+	font-size: 32px;
+	line-height: 1.12;
+	@include from-md() {
+		font-size: 54px;
+		margin-bottom: 50px;
+	}
+}
+
+h3, .h3 {
+	font-size: 22px;
+	margin-bottom: 24px;
+	line-height: 1.12;
+	@include from-md() {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+}
+
+h4, .h4 {
+	font-size: 12px;
+	margin-bottom: 1.5em;
+	line-height: 1.12;
+	@include from-md() {
+		font-size: 22px;
+	}
 }
 
 p, blockquote {
@@ -34,6 +55,7 @@ p, blockquote {
 .fs {
     &-7 { font-size: 0.875rem !important; }
     &-8 { font-size: 0.75rem !important; }
+    &-9 { font-size: 10px !important; }
     &-xs {
         @include from-xs() {
             &-1 { font-size: 2.5rem !important; }
@@ -44,6 +66,7 @@ p, blockquote {
             &-6 { font-size: 1rem !important; }
             &-7 { font-size: 0.875rem !important; }
             &-8 { font-size: 0.75rem !important; }
+            &-9 { font-size: 10px !important; }
         }
     }
     &-sm {
@@ -56,6 +79,7 @@ p, blockquote {
             &-6 { font-size: 1rem !important; }
             &-7 { font-size: 0.875rem !important; }
             &-8 { font-size: 0.75rem !important; }
+            &-9 { font-size: 10px !important; }
         }
     }
     &-md {
@@ -68,6 +92,7 @@ p, blockquote {
             &-6 { font-size: 1rem !important; }
             &-7 { font-size: 0.875rem !important; }
             &-8 { font-size: 0.75rem !important; }
+            &-9 { font-size: 10px !important; }
         }
     }
     &-lg {
@@ -80,6 +105,7 @@ p, blockquote {
             &-6 { font-size: 1rem !important; }
             &-7 { font-size: 0.875rem !important; }
             &-8 { font-size: 0.75rem !important; }
+            &-9 { font-size: 10px !important; }
         }
     }
     &-xl {
@@ -92,6 +118,7 @@ p, blockquote {
             &-6 { font-size: 1rem !important; }
             &-7 { font-size: 0.875rem !important; }
             &-8 { font-size: 0.75rem !important; }
+            &-9 { font-size: 10px !important; }
         }
     }
 }
