@@ -135,9 +135,6 @@
 				}
 			}
 		}
-		.product-btn {
-			background-color: var(--bs-primary);
-		}
 	}
 	&-slider {
 		position: absolute;
@@ -198,6 +195,10 @@
 				padding: 25px;
 			}
 		}
+		&:hover {
+			box-shadow: 0px 0px 10px 0px rgba(var(--bs-primary-rgb), 0.6);
+			border-color: rgba(var(--bs-primary-rgb), 0.4);
+		}
 	}
 	&-badge {
 		position: absolute;
@@ -251,6 +252,9 @@
 			height: 42px;
 			width: 42px;
 			border-radius: 10px;
+		}
+		&:hover {
+			background-color: var(--bs-primary);
 		}
 	}
 	&-body {
