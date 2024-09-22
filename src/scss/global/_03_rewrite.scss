@@ -597,6 +597,11 @@ input {
 }
 
 [data-theme="light"] {
+	.page {
+		&-link {
+			color: #161418;
+		}
+	}
 	.btn {
 		&-white {
 			--bs-btn-bg: #161418;
