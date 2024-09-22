@@ -107,8 +107,8 @@ $(document).ready(function() {
 		centeredSlides: true,
 		slidesPerView: 'auto',
 		centerMode: true,
-		loop: false,
-		initialSlide: 2,
+		loop: true,
+		initialSlide: 3,
 		navigation: {
 			nextEl: '.stories-slider .swiper-button-next',
 			prevEl: '.stories-slider .swiper-button-prev',
