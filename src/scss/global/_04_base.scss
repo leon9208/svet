@@ -56,9 +56,22 @@ picture, img {
 		h3, .h3 {
 			font-size: 16px;
 			line-height: 1.2;
+			margin-top: 24px;
 			@include from-md() {
 				line-height: 1.12;
 				font-size: 30px;
+				margin-top: 30px;
+			}
+		}
+		&-sm {
+			margin-bottom: 20px;
+			@include from-sm() { margin-bottom: 30px; }
+			&__row {
+				gap: 20px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
 			}
 		}
 
@@ -109,10 +122,21 @@ picture, img {
 			min-height: 260px;
 		}
 		&__title {
+			color: var(--bs-white);
 			margin-bottom: 16px;
 			@include from-lg() {
 				margin-bottom: 25px;
 			}
+		}
+		.btn-white {
+			--bs-btn-bg: var(--bs-white);
+			--bs-btn-hover-bg: var(--bs-primary);
+			--bs-btn-active-bg: var(--bs-btn-hover-bg);
+			--bs-btn-color: var(--bs-black);
+			--bs-btn-hover-color: var(--bs-white);
+			--bs-btn-active-color: var(--bs-btn-hover-color);
+			--bs-btn-disabled-color: var(--bs-btn-color);
+			--bs-btn-disabled-bg: var(--bs-btn-bg);
 		}
 	}
 	&-row {
@@ -183,25 +207,9 @@ picture, img {
 		}
 	}
 	&-breadcrumb {
-		display: flex;
-		align-items: center;
-		text-decoration: none;
-		color: var(--bs-primary);
-		font-size: 16px;
 		margin-bottom: 10px;
-		gap: 4px;
-		svg {
-			height: 20px;
-			width: 20px;
-		}
 		@include from-sm() {
-			font-size: 20px;
 			margin-bottom: 20px;
-			gap: 2px;
-			svg {
-				height: 24px;
-				width: 24px;
-			}
 		}
 	}
 }
