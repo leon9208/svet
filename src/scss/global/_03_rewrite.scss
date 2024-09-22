@@ -410,6 +410,11 @@ input {
 }
 
 .swiper {
+	&-slide {
+		&--auto {
+			width: auto;
+		}
+	}
 	&-control {
 		position: relative;
 		display: flex;
