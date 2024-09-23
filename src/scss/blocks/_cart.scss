@@ -92,16 +92,33 @@
 }
 
 .checkout-step {
-	display: flex;
-	flex-direction: column;
-	gap: 40px;
-	@include from-sm() { gap: 50px; }
 	&__body {
 		display: none;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 40px;
-		@include from-sm() { gap: 50px; }
+		padding-top: 24px;
+		@include from-sm() { 
+			gap: 50px;
+			padding-top: 50px;
+		}
+		h3 {
+			margin-bottom: 12px;
+			font-size: 14px;
+			@include from-sm() {
+				font-size: 20px;
+				margin-bottom: 40px;
+			}
+		}
+		p {
+			font-weight: 300;
+			font-size: 12px;
+			margin-bottom: 8px;
+			@include from-sm() {
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+		}
 	}
 	&.isactive {
 		.checkout-step__body {
@@ -111,14 +128,19 @@
 	&__headline {
 		position: relative;
 		display: flex;
+		align-items: flex-start;
 		gap: 8px;
+		padding-left: 28px;
 		@include from-sm() {
 			gap: 10px;
+			padding-left: 32px;
 		}
 		&[data-count] {
 			&::before {
 				content: attr(data-count);
-				top: 10px;
+				position: absolute;
+				left: 0;
+				top: -2px;
 				display: flex;
 				flex: none;
 				align-items: center;
@@ -131,6 +153,7 @@
 				height: 20px;
 				width: 20px;
 				@include from-sm() {
+					top: 0;
 					height: 22px;
 					width: 22px;
 					font-size: 14px;
@@ -141,6 +164,7 @@
 	&__title {
 		font-size: 16px;
 		margin: 0;
+		margin-bottom: 12px;
 		@include from-sm() {
 			font-size: 22px;
 		}
@@ -148,7 +172,7 @@
 	&__text {
 		color: #C6C6C6;
 		font-size: 12px;
-		margin: 12px 0 0 0;
+		// margin: 12px 0 0 0;
 		// @include from-sm() {
 		// 	margin: 20px 0 0 0;
 		// }
