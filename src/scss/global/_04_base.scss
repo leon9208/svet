@@ -28,8 +28,8 @@ picture, img {
 	padding: 40px 0;
 	@include from-md() { padding: 70px 0 ; }
 	&-big {
-		padding: 40px 0;
-		@include from-md() { padding: 70px 0 ; }
+		padding: 60px 0 40px 0;
+		@include from-md() { padding: 140px 0 70px 0 ; }
 	}
 	&-headline {
 		margin-bottom: 40px;
