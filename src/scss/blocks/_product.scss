@@ -216,6 +216,7 @@
 		color: var(--bs-white);
 		border: 1px solid var(--bs-primary);
 		z-index: 1;
+		height: 43px;
 		&__icon {
 			display: none;
 		}
@@ -226,6 +227,7 @@
 			left: 15px;
 			font-weight: 400;
 			font-size: 16px;
+			height: 42px;
 			&__icon { display: block; }
 		}
 	}
