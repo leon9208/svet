@@ -343,3 +343,13 @@ picture, img {
 		}
 	}
 }
+
+.scroll-wrap {
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	&::-webkit-scrollbar {
+		height: 0;
+		width: 0;
+	}
+}
