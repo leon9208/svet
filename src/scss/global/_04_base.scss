@@ -28,8 +28,8 @@ picture, img {
 	padding: 40px 0;
 	@include from-md() { padding: 70px 0 ; }
 	&-big {
-		padding: 40px 0;
-		@include from-md() { padding: 70px 0 ; }
+		padding: 60px 0 40px 0;
+		@include from-md() { padding: 140px 0 70px 0 ; }
 	}
 	&-headline {
 		margin-bottom: 40px;
@@ -118,6 +118,7 @@ picture, img {
 		align-items: center;
 		gap: 4px;
 		font-size: 16px;
+		padding: 3px 0;
 		&[aria-expanded="true"] {
 			display: none;
 		}
@@ -258,9 +259,9 @@ picture, img {
 		}
 	}
 	&-breadcrumb {
-		margin-bottom: 10px;
+		margin-bottom: 24px;
 		@include from-sm() {
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 		}
 	}
 }

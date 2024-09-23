@@ -1,0 +1,52 @@
+@@include('components/page-blocks/_head.html',{
+	"lang":"ru",
+	"title":"Вход",
+	"description":"Вход",
+	"keywords":"",
+	"favicon":"img/favicons/favicon",
+	"body-class": 'inner',
+	"theme": '',
+})
+<main class="main">
+	<section class="section section-big autorisation">
+		<div class="container">
+			<div class="autorisation__headline">
+				<div class="autorisation-nav">
+					<span href="#" class="autorisation-nav__link active">Вход</span>
+					<a href="registration.html" class="autorisation-nav__link">Регистрация</a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-8">
+					<form class="page-block__row align-items-start">
+						<div class="row form-wrap w-100">
+							<div class="col-12">
+								<label class="w-100">
+									<input type="email" class="form-control is-invalid" placeholder="E-mail" required>
+									<div class="form-message">Error</div>
+								</label>
+							</div>
+							<div class="col-12">
+								<label class="form-password w-100">
+									<button class="password-btn" type="button"></button>
+									<input type="password" class="form-control form-control--password" placeholder="Старый пароль" required>
+									<div class="form-message d-none">Error message</div>
+								</label>
+							</div>
+						</div>
+						<a href="recovery-password.html" class="text-decoration-none">Забыли пароль?</a>
+						<div class="row w-100">
+							<div class="col-md-6">
+								<button class="btn btn-white w-100" type="submit">Войти</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	@@include('components/page-blocks/_collections.html')
+</main>
+@@include('components/page-blocks/_footer.html')

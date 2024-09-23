@@ -459,13 +459,30 @@ if(pswdBtn.length > 0) {
 	pswdBtn.forEach(btn => {
 		btn.addEventListener('click', () => {
 			let pswdInput = btn.parentNode.querySelector('input')
-			console.log(pswdInput)
 			if(btn.classList.contains('active')) {
 				btn.classList.remove('active')
 				pswdInput.type = 'password'
 			} else {
 				btn.classList.add('active')
 				pswdInput.type = 'text'
+			}
+		})
+	})
+};
+
+// input check field length
+
+var inputsText = document.querySelectorAll('.form-control');
+
+if(inputsText.length > 0) {
+	inputsText.forEach(inputEl => {
+		inputEl.addEventListener('blur', () => {
+			if(inputEl.value.length > 0) {
+				console.log('Is filled')
+				inputEl.classList.add('is-filled')
+			} else {
+				console.log('Is empty')
+				inputEl.classList.remove('is-filled')
 			}
 		})
 	})
