@@ -450,3 +450,23 @@ if(heroVideoBtn.length > 0) {
 		})
 	})
 }
+
+//password-toggle
+
+var pswdBtn = document.querySelectorAll('.password-btn');
+
+if(pswdBtn.length > 0) {
+	pswdBtn.forEach(btn => {
+		btn.addEventListener('click', () => {
+			let pswdInput = btn.parentNode.querySelector('input')
+			console.log(pswdInput)
+			if(btn.classList.contains('active')) {
+				btn.classList.remove('active')
+				pswdInput.type = 'password'
+			} else {
+				btn.classList.add('active')
+				pswdInput.type = 'text'
+			}
+		})
+	})
+}

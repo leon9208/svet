@@ -1,0 +1,200 @@
+@@include('components/page-blocks/_head.html',{
+	"lang":"ru",
+	"title":"Личный кабинет",
+	"description":"Личный кабинет",
+	"keywords":"",
+	"favicon":"img/favicons/favicon",
+	"body-class": 'inner',
+	"theme": '',
+})
+<main class="main">
+	<section class="section lk">
+		<div class="container">
+			<div class="section-headline d-none d-lg-block">
+				<h1 class="h2">Личные данные</h1>
+			</div>
+
+			<div class="row lk__row">
+				<div class="col-lg-3 order-lg-1">
+					<div class="lk-aside">
+						<h2>Личный кабинет</h2>
+
+						<div class="lk-aside-list">
+							<a href="lk.html" class="lk-aside-link active">Личные данные</a>
+							<div class="d-flex justify-content-between">
+								<a href="lk-orders.html" class="lk-aside-link">Мои заказы</a>
+								<span class="d-none d-lg-block">0</span>
+							</div>
+							<a href="#" class="lk-aside-link d-none d-sm-block">Выйти</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-9">
+					<div class="page-wrap">
+						<form class="page-block">
+							<div class="page-block__content">
+								<h3 class="page-block__title m-0">Контактные данные</h3>
+								<div class="page-block__row">
+									<div class="row form-wrap">
+										<div class="col-md-6">
+											<label class="w-100">
+												<input type="text" class="form-control is-invalid" placeholder="Имя">
+												<span class="form-message">Error message</span>
+											</label>
+										</div>
+										<div class="col-md-6">
+											<label class="w-100">
+												<input type="text" class="form-control" placeholder="Фамилия">
+												<span class="form-message d-none">Error message</span>
+											</label>
+										</div>
+										<div class="col-md-6">
+											<label class="w-100">
+												<input type="email" class="form-control" placeholder="E-mail">
+												<span class="form-message d-none">Error message</span>
+											</label>
+										</div>
+										<div class="col-md-6">
+											<label class="w-100">
+												<input type="tel" class="form-control" placeholder="Номер телефона">
+												<span class="form-message d-none">Error message</span>
+											</label>
+										</div>
+									</div>
+									<div class="form-wrap d-flex flex-column">
+										<div class="switches gap-sm-4">
+											<label class="switch">
+												<input type="radio" name="sex" value="male" class="visually-hidden" checked>
+												<i></i>
+												<span class="fw-light">Мужчина</span>
+											</label>
+											<label class="switch">
+												<input type="radio" name="sex" value="female" class="visually-hidden">
+												<i></i>
+												<span class="fw-light">Женщина</span>
+											</label>
+										</div>
+										<div class="switches gap-sm-4">
+											<label class="switch">
+												<input type="radio" name="occupation" value="gamer" class="visually-hidden" checked>
+												<i></i>
+												<span class="fw-light">Геймер</span>
+											</label>
+											<label class="switch">
+												<input type="radio" name="occupation" value="designer" class="visually-hidden">
+												<i></i>
+												<span class="fw-light">Дизайнер</span>
+											</label>
+											<label class="switch">
+												<input type="radio" name="occupation" value="business" class="visually-hidden">
+												<i></i>
+												<span class="fw-light">Бизнес</span>
+											</label>
+										</div>
+									</div>
+									<div class="fs-7 fw-light">Для изменения email и номера телефона обратитесь на <a href="mailto:support@casarte.ru" class="text-primary text-decoration-none">support@casarte.ru</a></div>
+								</div>
+
+								<div class="page-block__divider"></div>
+
+								<h3 class="page-block__title m-0">Адрес</h3>
+								
+								<div class="page-block__row">
+									<div class="row form-wrap">
+										<div class="col-md-6">
+											<label class="w-100">
+												<input type="text" class="form-control is-invalid" placeholder="Город">
+												<span class="form-message">Error message</span>
+											</label>
+										</div>
+										<div class="col-md-6">
+											<label class="w-100">
+												<input type="text" class="form-control" placeholder="Улица">
+												<span class="form-message d-none">Error message</span>
+											</label>
+										</div>
+										<div class="col-6">
+											<label class="w-100">
+												<input type="text" class="form-control" placeholder="Дом">
+												<span class="form-message d-none">Error message</span>
+											</label>
+										</div>
+										<div class="col-6">
+											<label class="w-100">
+												<input type="text" class="form-control" placeholder="Подъезд">
+												<span class="form-message d-none">Error message</span>
+											</label>
+										</div>
+										<div class="col-6 col-md-4">
+											<label class="w-100">
+												<input type="text" class="form-control" placeholder="Квартира/ офис">
+												<span class="form-message d-none">Error message</span>
+											</label>
+										</div>
+										<div class="col-6 col-md-4">
+											<label class="w-100">
+												<input type="text" class="form-control" placeholder="Этаж">
+												<span class="form-message d-none">Error message</span>
+											</label>
+										</div>
+										<div class="col-md-4">
+											<label class="w-100">
+												<input type="text" class="form-control" placeholder="Домофон">
+												<span class="form-message d-none">Error message</span>
+											</label>
+										</div>
+									</div>
+									<div class="page-link align-self-start" data-bs-toggle="collapse" data-bs-target="#collapseExample">
+										<span>Сменить пароль</span>
+										@@include('components/bem-blocks/_sprite.html', {
+											'id': 'arr-right',
+											'height': '20',
+											'width': '20',
+											'class': '',
+										})
+									</div>
+								</div>
+
+								<div class="collapse w-100" id="collapseExample">
+									<div class="page-block__content">
+										<div class="page-block__divider"></div>
+										<h3 class="page-block__title m-0">Смена пароля</h3>
+										<div class="row form-wrap">
+											<div class="col-md-4">
+												<label class="form-password w-100">
+													<button class="password-btn" type="button"></button>
+													<input type="password" class="form-control form-control--password" placeholder="Старый пароль">
+													<span class="form-message d-none">Error message</span>
+												</label>
+											</div>
+											<div class="col-md-4">
+												<label class="form-password w-100">
+													<button class="password-btn" type="button"></button>
+													<input type="password" class="form-control form-control--password" placeholder="Новый пароль">
+													<span class="form-message d-none">Error message</span>
+												</label>
+											</div>
+											<div class="col-md-4">
+												<label class="form-password w-100">
+													<button class="password-btn" type="button"></button>
+													<input type="password" class="form-control form-control--password" placeholder="Повторить ">
+													<span class="form-message d-none">Error message</span>
+												</label>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<button class="btn btn-white w-100 w-sm-auto" type="submit">Сохранить изменения</button>
+								<button class="btn-none text-white align-self-center d-block d-sm-none" type="button">Выйти</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</main>
+@@include('components/page-blocks/_footer.html')
