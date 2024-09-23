@@ -1,0 +1,91 @@
+@@include('components/page-blocks/_head.html',{
+	"lang":"ru",
+	"title":"Регистрация",
+	"description":"Регистрация",
+	"keywords":"",
+	"favicon":"img/favicons/favicon",
+	"body-class": 'inner',
+	"theme": '',
+})
+<main class="main">
+	<section class="section section-big autorisation">
+		<div class="container">
+			<div class="autorisation__headline">
+				<div class="autorisation-nav">
+					<span class="autorisation-nav__link active">Регистрация</span>
+					<a href="login.html" class="autorisation-nav__link">Вход</a>
+				</div>
+			</div>
+
+			<form>
+				<div class="row">
+					<div class="col-md-6 col-lg-5 col-xl-4">
+						<div class="row form-wrap">
+							<div class="col-12">
+								<label class="w-100">
+									<input type="text" class="form-control" placeholder="Имя" required>
+									<div class="form-message d-none">Error</div>
+								</label>
+							</div>
+							<div class="col-12">
+								<label class="w-100">
+									<input type="email" class="form-control is-invalid" placeholder="E-mail" value="example@mail.ru" required>
+									<div class="form-message">Error</div>
+								</label>
+							</div>
+							<div class="col-12">
+								<label class="w-100">
+									<input type="tel" class="form-control" placeholder="Телефон" required>
+									<div class="form-message d-none">Error</div>
+								</label>
+							</div>
+							<div class="col-12">
+								<label class="form-password w-100">
+									<button class="password-btn" type="button"></button>
+									<input type="password" class="form-control form-control--password" placeholder="Пароль" required>
+									<div class="form-message d-none">Error message</div>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-5 col-xl-4">
+						<div class="d-flex flex-column h-100 ps-md-4 row-md-4">
+							<div class="section p-md-0">
+								<div class="row form-wrap-sm">
+									<div class="col-12">
+										<label class="form-check">
+											<input class="form-check-input" type="checkbox" value="">
+											<span class="form-check-label">Я согласен с <a href="#" class="text-primary text-decoration-none">условиями использования</a> сервиса</span>
+										</label>
+										<div class="form-message">Error message</div>
+									</div>
+									<div class="col-12">
+										<label class="form-check">
+											<input class="form-check-input" type="checkbox" value="">
+											<span class="form-check-label">Я согласен с <a href="#" class="text-primary text-decoration-none">условиями использования</a> сервиса</span>
+										</label>
+										<div class="form-message d-none">Error message</div>
+									</div>
+									<div class="col-12">
+										<label class="form-check">
+											<input class="form-check-input" type="checkbox" value="" checked>
+											<span class="form-check-label">Я согласен с <a href="#" class="text-primary text-decoration-none">условиями использования</a> сервиса</span>
+										</label>
+										<div class="form-message d-none">Error message</div>
+									</div>
+								</div>
+							</div>
+
+							<button class="btn btn-white mt-auto">Зарегистрироваться</button>
+						</div>
+					</div>
+
+				</div>
+			</form>
+		</div>
+	</section>
+
+	@@include('components/page-blocks/_collections.html')
+</main>
+@@include('components/page-blocks/_footer.html')

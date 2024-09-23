@@ -1,0 +1,22 @@
+.autorisation {
+	&__headline {
+		margin-bottom: 40px;
+		font-size: 22px;
+		@include from-sm() {
+			font-size: 30px;
+			margin-bottom: 50px;
+		}
+	}
+	&-nav {
+		display: flex;
+		display: flex;
+		gap: 20px;
+		&__link {
+			color: var(--bs-gray);
+			text-decoration: none;
+			&:hover, &.active {
+				color: var(--bs-body-color);
+			}
+		}
+	}
+}
