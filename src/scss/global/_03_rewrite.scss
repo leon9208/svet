@@ -536,11 +536,31 @@ input {
 	}
 }
 
-.mb {
-	&-sm{
-		&-6 { @include from-sm() { margin-bottom: 3.4rem !important; } }
+.m {
+	&t {
+		&-7 { margin-top: 40px !important; }
+		&-8 { margin-top: 50px !important; }
 	}
-};
+	&b {
+		&-7 { margin-bottom: 40px !important; }
+		&-8 { margin-bottom: 50px !important; }
+	}
+	@include from-sm() {
+		&b {
+			&-sm {
+				&-6 { margin-bottom: 3.4rem !important; }
+				&-7 { margin-bottom: 40px !important; }
+				&-8 { margin-bottom: 50px !important; }
+			}
+		}
+		&t {
+			&-sm { 
+				&-7 { margin-top: 40px !important; }
+				&-8 { margin-top: 50px !important; }
+			}
+		}
+	}
+}
 
 .card {
 	--bs-card-bg: var(--bs-dark);
