@@ -1,0 +1,42 @@
+.lk {
+	@include sm() {
+		.page-block {
+			padding: 0;
+			border-radius: 0;
+			background-color: transparent;
+		}
+	}
+	&__row {
+		row-gap: 40px;
+	}
+	&-aside {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		h2 {
+			margin: 0;
+			font-size: 32px;
+			@include from-md() {
+				font-size: 30px;
+			}
+
+		}
+		&-list {
+			display: flex;
+			font-size: 22px;
+			gap: 20px;
+			@include from-md() {
+				gap: 14px;
+				font-size: 16px;
+				flex-direction: column;
+			}
+		}
+		&-link {
+			text-decoration: none;
+			color: var(--bs-gray);
+			&.active, &:hover {
+				color: var(--bs-white);
+			}
+		}
+	}
+}
