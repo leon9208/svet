@@ -242,16 +242,19 @@
 		background-color: transparent;
 		border: 0;
 		z-index: 2;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8613 9.59082H19.7207V11.375H10.8613V20.3164H9.07715V11.375H0.238281V9.59082H9.07715V0.628906H10.8613V9.59082Z' fill='white'/%3E%3C/svg%3E%0A");
-		background-size: 16px;
+		font-weight: 300;
+		font-size: 28px;
 		transition: .25s ease;
+		color: var(--bs-white);
+		line-height: 1;
 		@include from-sm() {
 			background-size: 24px;
 			height: 42px;
 			width: 42px;
 			border-radius: 10px;
+			top: 15px;
+			right: 15px;
+			font-size: 42px;
 		}
 		&:hover {
 			background-color: var(--bs-primary);
