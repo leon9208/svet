@@ -38,35 +38,32 @@
 			</ul>
 		</div>
 		
-		<div class="product-table m-0 d-none d-sm-block">
-			<h4>Размеры продукта</h4>
+		<div class="collapse d-sm-block" id="productTable">
+			<div class="product-table">
+				<h4>Размеры продукта</h4>
 
-			<ul class="product-table__list">
-				<li>
-					<span>Расстояние между каплями, см</span>
-					<span>10.0</span>
-				</li>
-				<li>
-					<span>Расстояние между светодиодами, см</span>
-					<span>8.0</span>
-				</li>
-				<li>
-					<span>Длина провода, м</span>
-					<span>5.5</span>
-				</li>
-				<li>
-					<span>Длина силового кабеля, м</span>
-					<span>1.0</span>
-				</li>
-			</ul>
+				<ul class="product-table__list">
+					<li>
+						<span>Расстояние между каплями, см</span>
+						<span>10.0</span>
+					</li>
+					<li>
+						<span>Расстояние между светодиодами, см</span>
+						<span>8.0</span>
+					</li>
+					<li>
+						<span>Длина провода, м</span>
+						<span>5.5</span>
+					</li>
+					<li>
+						<span>Длина силового кабеля, м</span>
+						<span>1.0</span>
+					</li>
+				</ul>
+			</div>
 		</div>
 
-		<div class="d-flex d-sm-none">
-			@@include('../bem-blocks/_page-link.html', {
-				'text': 'Смотреть все характеристики',
-				'class': '',
-			})
-		</div>
+		<button class="product-collapse-btn d-inline-flex d-sm-none" type="button" data-bs-toggle="collapse" data-bs-target="#productTable" aria-expanded="false" data-text-first="Смотреть все характеристики" data-text-last="Скрыть все характеристики"></button>
 	</div>
 </section>
 

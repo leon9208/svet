@@ -522,4 +522,36 @@
 			}
 		}
 	}
+	&-collapse {
+		&-btn {
+			position: relative;
+			font-size: 16px;
+			display: inline-flex;
+			gap: 4px;
+			background-color: transparent;
+			border: 0;
+			color: var(--bs-body-color);
+			padding: 3px 0;
+			margin: 0;
+			&::before {
+				content: attr(data-text-first);
+			}
+			&::after {
+				content: '';
+				height: 20px;
+				width: 20px;
+				flex: none;
+				background-size: contain;
+				background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 8L9.65685 13.6569L15.3137 8' stroke='%23FFFFFF'/%3E%3C/svg%3E%0A");
+			}
+			&[aria-expanded=true] {
+				&::before {
+					content: attr(data-text-last);
+				}
+				&::after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
 }
