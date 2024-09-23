@@ -1,0 +1,156 @@
+.cart {
+	&-product {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		&__img {
+			flex: none;
+			height: 80px;
+			width: 80px;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			@include from-sm() {
+				height: 140px;
+				width: 140px;
+			}
+		}
+		&__name {
+			font-size: 14px;
+			margin-bottom: 6px;
+			@include from-sm() {
+				font-size: 20px;
+				margin-bottom: 8px;
+			}
+		}
+		&__id {
+			font-weight: 300;
+			font-size: 10px;
+			margin-bottom: 6px;
+			@include from-sm() {
+				font-weight: 400;
+				font-size: 12px;
+			}
+		}
+		&__price {
+			font-size: 14px;
+			font-weight: 700;
+			margin-bottom: 10px;
+			@include from-sm() {
+				margin-bottom: 0;
+				font-weight: 400;
+				font-size: 20px;
+			}
+		}
+	}
+	&-info {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		@include from-sm() {
+			gap: 16px;
+		}
+		@include md() {
+			margin: 40px 0 0;
+			padding: 40px 0 0;
+			border-top: 1px solid var(--bs-dark-bg-subtle);
+			// border-bottom: 1px solid var(--bs-dark-bg-subtle);
+		}
+		&-list {
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+			@include from-sm() {
+				gap: 12px;
+			}
+		}
+		&-item {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 0.5rem;
+		}
+		&-total {
+			display: flex;
+			justify-content: space-between;
+			gap: 0.5rem;
+			font-weight: 700;
+			font-size: 16px;
+			@include from-sm() {
+				font-size: 30px;
+				font-weight: 400;
+			}
+		}
+	}
+	&-checkout {
+		&__steps {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+}
+
+.checkout-step {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	@include from-sm() { gap: 50px; }
+	&__body {
+		display: none;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 40px;
+		@include from-sm() { gap: 50px; }
+	}
+	&.isactive {
+		.checkout-step__body {
+			display: flex;
+		}
+	}
+	&__headline {
+		position: relative;
+		display: flex;
+		gap: 8px;
+		@include from-sm() {
+			gap: 10px;
+		}
+		&[data-count] {
+			&::before {
+				content: attr(data-count);
+				top: 10px;
+				display: flex;
+				flex: none;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				border-radius: 50px;
+				background-color: #C6C6C6;
+				color: #000;
+				font-size: 12px;
+				height: 20px;
+				width: 20px;
+				@include from-sm() {
+					height: 22px;
+					width: 22px;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	&__title {
+		font-size: 16px;
+		margin: 0;
+		@include from-sm() {
+			font-size: 22px;
+		}
+	}
+	&__text {
+		color: #C6C6C6;
+		font-size: 12px;
+		margin: 12px 0 0 0;
+		// @include from-sm() {
+		// 	margin: 20px 0 0 0;
+		// }
+	}
+}

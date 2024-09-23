@@ -135,9 +135,6 @@
 				}
 			}
 		}
-		.product-btn {
-			background-color: var(--bs-primary);
-		}
 	}
 	&-slider {
 		position: absolute;
@@ -198,6 +195,10 @@
 				padding: 25px;
 			}
 		}
+		&:hover {
+			box-shadow: 0px 0px 10px 0px rgba(var(--bs-primary-rgb), 0.6);
+			border-color: rgba(var(--bs-primary-rgb), 0.4);
+		}
 	}
 	&-badge {
 		position: absolute;
@@ -240,7 +241,7 @@
 		justify-content: center;
 		background-color: transparent;
 		border: 0;
-		z-index: 1;
+		z-index: 2;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.8613 9.59082H19.7207V11.375H10.8613V20.3164H9.07715V11.375H0.238281V9.59082H9.07715V0.628906H10.8613V9.59082Z' fill='white'/%3E%3C/svg%3E%0A");
@@ -251,6 +252,9 @@
 			height: 42px;
 			width: 42px;
 			border-radius: 10px;
+		}
+		&:hover {
+			background-color: var(--bs-primary);
 		}
 	}
 	&-body {
@@ -276,7 +280,7 @@
 		line-height: 1.3;
 		margin-bottom: 12px;
 		text-decoration: none;
-		color: var(--bs-white);
+		color: var(--bs-body-color);
 		@include from-sm() {
 			margin-bottom: 20px;
 			font-size: 22px;

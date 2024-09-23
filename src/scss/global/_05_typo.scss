@@ -124,6 +124,9 @@ p, blockquote {
 }
 
 .text {
+    &-gray {
+        color: #C6C6C6;
+    }
     &-sm {
         @include from-sm() {
             &-white {
