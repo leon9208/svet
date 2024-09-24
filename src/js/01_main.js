@@ -201,9 +201,23 @@ $(document).ready(function() {
 		slidesPerView: 1,
 		loop: false,
 		spaceBetween: 20,
+		navigation: {
+			nextEl: '.pin-slider--desktop .swiper-button-next',
+			prevEl: '.pin-slider--desktop .swiper-button-prev',
+		},
 		breakpoints: {
-			0: { enabled: false },
-			767: { enabled: true }
+			0: {
+				enabled: false,
+				navigation: {
+					enabled: false,
+				}
+			},
+			767: {
+				enabled: true,
+				navigation: {
+					enabled: true,
+				}
+			}
 		}
 	});
 	
