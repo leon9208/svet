@@ -546,4 +546,19 @@ $('.nav-btn').on('click', function() {
 		$(this).addClass('active')
 		$('.nav-mobile').show()
 	}
-})
+});
+
+function createToast(text, type) {
+	let toastEl = document.querySelector('.alert');
+	if(toastEl) { toastEl.remove() }
+
+	let toast = `<div class="alert alert--${type}"><div class="alert__content">${text}</div><button class="alert__btn" type="button"></button></div>`;
+
+	document.body.insertAdjacentHTML("beforeend", toast);
+
+	document.querySelector('.alert').addEventListener('click', function() {
+		this.remove()
+	})
+};
+// primary / danger
+createToast('Lorem ipsum', 'danger')
