@@ -516,4 +516,15 @@ if(slider) {
 		const walk = (x - startX) * 3; //scroll-fast
 		slider.scrollLeft = scrollLeft - walk;
 	});
-}
+};
+
+// mobile menu 
+$('.nav-btn').on('click', function() {
+	if($(this).hasClass('active')) {
+		$(this).removeClass('active')
+		$('.nav-mobile').hide()
+	} else {
+		$(this).addClass('active')
+		$('.nav-mobile').show()
+	}
+})
