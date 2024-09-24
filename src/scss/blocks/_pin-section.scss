@@ -4,6 +4,13 @@
 	--pin-size: 28px;
 	height: var(--pin-size);
 	width: var(--pin-size);
+	&-section {
+		.page-link {
+			padding: 8px 0;
+		}
+		@include from-sm() {
+		}
+	}
 	&-slider {
 		overflow: unset;
 		&--desktop {
