@@ -140,7 +140,7 @@
 				content: attr(data-count);
 				position: absolute;
 				left: 0;
-				top: -2px;
+				top: 0;
 				display: flex;
 				flex: none;
 				align-items: center;
@@ -153,7 +153,7 @@
 				height: 20px;
 				width: 20px;
 				@include from-sm() {
-					top: 0;
+					top: 2px;
 					height: 22px;
 					width: 22px;
 					font-size: 14px;
@@ -165,7 +165,9 @@
 		font-size: 16px;
 		margin: 0;
 		margin-bottom: 12px;
+		padding-top: 2px;
 		@include from-sm() {
+			padding-top: 0;
 			font-size: 22px;
 		}
 	}
