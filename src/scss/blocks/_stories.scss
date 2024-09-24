@@ -1,9 +1,15 @@
 .stories {
 	&-slider {
-		overflow: unset;
+		@include lg() {
+			overflow: unset;
+		}
 		.swiper{
 			&-slide {
 				width: auto;
+				opacity: 0;
+				&-visible {
+					opacity: 1;
+				}
 			}
 			&-pagination {
 				--swiper-pagination-bottom: 0;

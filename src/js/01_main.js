@@ -104,10 +104,17 @@ $(document).ready(function() {
 	var storiesSlider = new Swiper(".stories-slider", {
 		effect: "coverflow",
 		grabCursor: true,
-		centeredSlides: true,
 		slidesPerView: 'auto',
+		centeredSlides: true,
 		centerMode: true,
 		loop: true,
+		// freeMode: true,
+		// freeModeMomentumBounce: false,
+		// freeModeMomentumRatio: .1,
+		// freeModeMomentumVelocityRatio: .8,
+		// freeModeSticky: true,
+		// // loopAdditionalSlides: slidesNum, // slidesNum contains the initial slides number
+		// // loopedSlides: slidesNum,
 		initialSlide: 3,
 		navigation: {
 			nextEl: '.stories-slider .swiper-button-next',
@@ -130,9 +137,7 @@ $(document).ready(function() {
 			0: {
 				pagination: { enabled: true },
 				navigation: { enabled: false },
-				loop: true,
 			},
-			768: { loop: false, },
 			1201: {
 				pagination: { enabled: false },
 				navigation: { enabled: true },
