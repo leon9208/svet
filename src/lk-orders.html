@@ -1,0 +1,93 @@
+@@include('components/page-blocks/_head.html',{
+	"lang":"ru",
+	"title":"Мои заказы",
+	"description":"Мои заказы",
+	"keywords":"",
+	"favicon":"img/favicons/favicon",
+	"body-class": 'inner',
+	"theme": '',
+})
+<main class="main">
+	<section class="section lk-orders">
+		<div class="container">
+			<div class="section-headline d-none d-lg-block">
+				<h1 class="h2">Мои заказы</h1>
+			</div>
+
+			<div class="row lk__row">
+				<div class="col-lg-3 order-lg-1">
+					<div class="lk-aside ps-md-4">
+						<h2>Личный кабинет</h2>
+						<div class="lk-aside-list">
+							<a href="lk.html" class="lk-aside-link order-1 order-sm-0">Личные данные</a>
+							<div class="d-flex justify-content-between">
+								<a href="lk-orders.html" class="lk-aside-link active">Мои заказы</a>
+								<span class="d-none d-lg-block">0</span>
+							</div>
+							<a href="#" class="lk-aside-link d-none d-sm-block">Выйти</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-9">
+					<div class="page-block mb-4 lk-orders-card">
+						<div class="lk-orders-card__content">
+							<h3 class="lk-orders-card__title">К сожалению, ваша история заказов пуста</h3>
+							<p class="text-gray lk-orders-card__text m-0">Вы можете выбрать подходящую технику в нашем каталоге</p>
+						</div>
+						<a href="catalog.html" class="btn btn-white w-100 w-sm-auto">Перейти в каталог</a>
+					</div>
+					<div class="page-wrap">
+						<div class="page-block">
+							<div class="lk-order">
+								<div class="lk-order-head">
+									<div class="d-flex gap-2 align-items-center">
+										<span>От 8 августа</span>
+										<span class="dot"></span>
+										<span>номер заказа</span>
+									</div>
+									<div class="lk-order-price text-white">7 900 ₽</div>
+								</div>
+								<div class="lk-order-body">
+									<div class="lk-order-body__content">
+										<div class="lk-order-title">Уже у вас</div>
+										<span>Вы получили 21 августа</span>
+									</div>
+									<div class="lk-order-imgs">
+										<div class="lk-order-img" style="background-image: url(img/product-box.webp);"></div>
+										<div class="lk-order-img" style="background-image: url(img/product-box.webp);"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="page-block">
+							<div class="lk-order">
+								<div class="lk-order-head">
+									<div class="d-flex gap-2 align-items-center">
+										<span>От 8 августа</span>
+										<span class="dot"></span>
+										<span>номер заказа</span>
+									</div>
+									<div class="lk-order-price text-white">7 900 ₽</div>
+								</div>
+								<div class="lk-order-body">
+									<div class="lk-order-body__content">
+										<div class="lk-order-title">Уже у вас</div>
+										<span>Вы получили 21 августа</span>
+									</div>
+									<div class="lk-order-imgs">
+										<div class="lk-order-img" style="background-image: url(img/product-box.webp);"></div>
+										<div class="lk-order-img" style="background-image: url(img/product-box.webp);"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="catalog.html" class="btn btn-white mt-7 mt-sm-8 w-100 w-sm-auto">Перейти в каталог</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</main>
+@@include('components/page-blocks/_footer.html')

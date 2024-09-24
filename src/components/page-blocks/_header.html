@@ -11,31 +11,59 @@
 					})
 				</a>
 			</div>
-			<div class="col-auto">
+			<div class="col-auto d-none d-lg-block">
 				@@include('_nav.html')
 			</div>
-			<div class="col-auto">
-				<div class="d-flex gap-4 align-items-end">
-					<a href="#" class="nav-link">
+			<div class="col-auto ">
+				<div class="d-flex gap-4 align-items-center">
+					<div class="d-none d-lg-block">
+						<form>
+							<div class="form-search header__search">
+								<input type="text" class="form-search__input" placeholder="Поиск" required>
+								<button class="form-search__btn" type="reset"></button>
+							</div>
+						</form>
+					</div>
+					<a href="#" class="nav__link">
 						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="11" cy="7" r="4.25" stroke="white" stroke-width="1.5"/>
-							<path d="M2 20V20C2.97615 17.0173 5.75895 15 8.89732 15H13.4545C16.383 15 18.9797 16.8824 19.8906 19.6656L20 20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+							<circle cx="11" cy="7" r="4.25" stroke="currentColor" stroke-width="1.5"/>
+							<path d="M2 20V20C2.97615 17.0173 5.75895 15 8.89732 15H13.4545C16.383 15 18.9797 16.8824 19.8906 19.6656L20 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
 						</svg>
 					</a>
-					<a href="cart.html" class="nav-link header-cart" data-count="0">
+					<a href="cart.html" class="nav__link header-cart" data-count="0">
 						<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M17 16.4508C17.5304 16.4508 18.0391 16.6615 18.4142 17.0366C18.7893 17.4116 19 17.9203 19 18.4508C19 18.9812 18.7893 19.4899 18.4142 19.865C18.0391 20.2401 17.5304 20.4508 17 20.4508C16.4696 20.4508 15.9609 20.2401 15.5858 19.865C15.2107 19.4899 15 18.9812 15 18.4508C15 17.3408 15.89 16.4508 17 16.4508ZM1 0.450775H4.27L5.21 2.45078H20C20.2652 2.45078 20.5196 2.55613 20.7071 2.74367C20.8946 2.93121 21 3.18556 21 3.45078C21 3.62078 20.95 3.79078 20.88 3.95078L17.3 10.4208C16.96 11.0308 16.3 11.4508 15.55 11.4508H8.1L7.2 13.0808L7.17 13.2008C7.17 13.2671 7.19634 13.3307 7.24322 13.3776C7.29011 13.4244 7.3537 13.4508 7.42 13.4508H19V15.4508H7C6.46957 15.4508 5.96086 15.2401 5.58579 14.865C5.21071 14.4899 5 13.9812 5 13.4508C5 13.1008 5.09 12.7708 5.24 12.4908L6.6 10.0408L3 2.45078H1V0.450775ZM7 16.4508C7.53043 16.4508 8.03914 16.6615 8.41421 17.0366C8.78929 17.4116 9 17.9203 9 18.4508C9 18.9812 8.78929 19.4899 8.41421 19.865C8.03914 20.2401 7.53043 20.4508 7 20.4508C6.46957 20.4508 5.96086 20.2401 5.58579 19.865C5.21071 19.4899 5 18.9812 5 18.4508C5 17.3408 5.89 16.4508 7 16.4508ZM16 9.45078L18.78 4.45078H6.14L8.5 9.45078H16Z" fill="white" stroke="black" stroke-width="0.5"/>
+							<path d="M17 16.4508C17.5304 16.4508 18.0391 16.6615 18.4142 17.0366C18.7893 17.4116 19 17.9203 19 18.4508C19 18.9812 18.7893 19.4899 18.4142 19.865C18.0391 20.2401 17.5304 20.4508 17 20.4508C16.4696 20.4508 15.9609 20.2401 15.5858 19.865C15.2107 19.4899 15 18.9812 15 18.4508C15 17.3408 15.89 16.4508 17 16.4508ZM1 0.450775H4.27L5.21 2.45078H20C20.2652 2.45078 20.5196 2.55613 20.7071 2.74367C20.8946 2.93121 21 3.18556 21 3.45078C21 3.62078 20.95 3.79078 20.88 3.95078L17.3 10.4208C16.96 11.0308 16.3 11.4508 15.55 11.4508H8.1L7.2 13.0808L7.17 13.2008C7.17 13.2671 7.19634 13.3307 7.24322 13.3776C7.29011 13.4244 7.3537 13.4508 7.42 13.4508H19V15.4508H7C6.46957 15.4508 5.96086 15.2401 5.58579 14.865C5.21071 14.4899 5 13.9812 5 13.4508C5 13.1008 5.09 12.7708 5.24 12.4908L6.6 10.0408L3 2.45078H1V0.450775ZM7 16.4508C7.53043 16.4508 8.03914 16.6615 8.41421 17.0366C8.78929 17.4116 9 17.9203 9 18.4508C9 18.9812 8.78929 19.4899 8.41421 19.865C8.03914 20.2401 7.53043 20.4508 7 20.4508C6.46957 20.4508 5.96086 20.2401 5.58579 19.865C5.21071 19.4899 5 18.9812 5 18.4508C5 17.3408 5.89 16.4508 7 16.4508ZM16 9.45078L18.78 4.45078H6.14L8.5 9.45078H16Z" fill="currentColor"/>
 						</svg>
 					</a>
-					<button class="btn-none d-lg-none text-inherit" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive">
-						@@include('../bem-blocks/_sprite.html', {
-							'id': 'menu',
-							'class': '',
-							'height': '32',
-							'width': '32',
-						})
+					<button class="nav-btn d-lg-none" type="button">
+						<span></span>
+						<span></span>
+						<span></span>
 					</button>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav-mobile">
+		<div class="container">
+			<div class="nav-mobile__content">
+				<form>
+					<div class="form-search">
+						<input type="text" class="form-search__input" placeholder="Поиск" required>
+						<button class="form-search__btn" type="reset"></button>
+					</div>
+				</form>
+				<nav class="nav">
+					<ul class="nav__list flex-column">
+						<li class="nav__item"><a href="/" class="nav__link active">Главная</a></li>
+						<li class="nav__item"><a href="catalog.html" class="nav__link">Каталог</a></li>
+						<li class="nav__item"><a href="for-gamers.html" class="nav__link">Геймерам</a></li>
+						<li class="nav__item"><a href="for-designers.html" class="nav__link">Дизайнерам</a></li>
+						<li class="nav__item"><a href="for-business.html" class="nav__link">Бизнесу</a></li>
+						<li class="nav__item"><a href="blog.html" class="nav__link">Блог</a></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</div>

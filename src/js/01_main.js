@@ -104,10 +104,17 @@ $(document).ready(function() {
 	var storiesSlider = new Swiper(".stories-slider", {
 		effect: "coverflow",
 		grabCursor: true,
-		centeredSlides: true,
 		slidesPerView: 'auto',
+		centeredSlides: true,
 		centerMode: true,
 		loop: true,
+		// freeMode: true,
+		// freeModeMomentumBounce: false,
+		// freeModeMomentumRatio: .1,
+		// freeModeMomentumVelocityRatio: .8,
+		// freeModeSticky: true,
+		// // loopAdditionalSlides: slidesNum, // slidesNum contains the initial slides number
+		// // loopedSlides: slidesNum,
 		initialSlide: 3,
 		navigation: {
 			nextEl: '.stories-slider .swiper-button-next',
@@ -130,9 +137,7 @@ $(document).ready(function() {
 			0: {
 				pagination: { enabled: true },
 				navigation: { enabled: false },
-				loop: true,
 			},
-			768: { loop: false, },
 			1201: {
 				pagination: { enabled: false },
 				navigation: { enabled: true },
@@ -201,9 +206,23 @@ $(document).ready(function() {
 		slidesPerView: 1,
 		loop: false,
 		spaceBetween: 20,
+		navigation: {
+			nextEl: '.pin-slider--desktop .swiper-button-next',
+			prevEl: '.pin-slider--desktop .swiper-button-prev',
+		},
 		breakpoints: {
-			0: { enabled: false },
-			767: { enabled: true }
+			0: {
+				enabled: false,
+				navigation: {
+					enabled: false,
+				}
+			},
+			767: {
+				enabled: true,
+				navigation: {
+					enabled: true,
+				}
+			}
 		}
 	});
 	
@@ -487,3 +506,44 @@ if(inputsText.length > 0) {
 		})
 	})
 }
+
+//scroll wrap
+const slider = document.querySelector('.scroll-wrap');
+if(slider) {
+	let isDown = false;
+	let startX;
+	let scrollLeft;
+	
+	slider.addEventListener('mousedown', (e) => {
+		isDown = true;
+		slider.classList.add('active');
+		startX = e.pageX - slider.offsetLeft;
+		scrollLeft = slider.scrollLeft;
+	});
+	slider.addEventListener('mouseleave', () => {
+		isDown = false;
+		slider.classList.remove('active');
+	});
+	slider.addEventListener('mouseup', () => {
+		isDown = false;
+		slider.classList.remove('active');
+	});
+	slider.addEventListener('mousemove', (e) => {
+		if(!isDown) return;
+		e.preventDefault();
+		const x = e.pageX - slider.offsetLeft;
+		const walk = (x - startX) * 3; //scroll-fast
+		slider.scrollLeft = scrollLeft - walk;
+	});
+};
+
+// mobile menu 
+$('.nav-btn').on('click', function() {
+	if($(this).hasClass('active')) {
+		$(this).removeClass('active')
+		$('.nav-mobile').hide()
+	} else {
+		$(this).addClass('active')
+		$('.nav-mobile').show()
+	}
+})
