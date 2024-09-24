@@ -445,6 +445,18 @@ input {
 	&-xs {
 		min-height: 50px !important;
 	}
+	&-outline {
+		--bs-btn-bg: transparent;
+		--bs-btn-border-width: 1px;
+		--bs-btn-border-color: var(--bs-gray);
+		--bs-btn-hover-border-color: var(--bs-primary);
+		--bs-btn-active-border-color: var(--bs-primary);
+		--bs-btn-active-bg: var(--bs-primary);
+		--bs-btn-hover-bg: var(--bs-primary);
+		--bs-btn-color: var(--bs-white);
+		--bs-btn-hover-color: var(--bs-white);
+		--bs-btn-active-color: var(--bs-white);
+	}
 	&-none {
 		display: inline-flex;
 		outline: none;

@@ -27,6 +27,10 @@ picture, img {
 	background-position: center;
 	padding: 40px 0;
 	@include from-md() { padding: 70px 0 ; }
+	&-sm {
+		padding: 40px 0;
+		@include from-md() { padding: 50px 0 ; }
+	}
 	&-big {
 		padding: 60px 0 40px 0;
 		@include from-md() { padding: 140px 0 70px 0 ; }
