@@ -561,4 +561,19 @@ function createToast(text, type) {
 	})
 };
 // primary / danger
-createToast('Lorem ipsum', 'danger')
+createToast('Lorem ipsum', 'danger');
+
+// toggle cart-checkout steps
+$('.checkout-step__btn').on('click', function() {
+	var parent = $(this).closest('.checkout-step')
+	$('.checkout-step.isactive').removeClass('isactive');
+
+	parent.addClass('isvalid')
+	parent.next().addClass('isactive isvalid')
+});
+
+$('.checkout-step__change').on('click', function() {
+	var parent = $(this).closest('.checkout-step')
+	$('.checkout-step.isactive').removeClass('isactive');
+	parent.addClass('isactive')
+});
