@@ -449,13 +449,13 @@ input {
 		--bs-btn-bg: transparent;
 		--bs-btn-border-width: 1px;
 		--bs-btn-border-color: var(--bs-gray);
-		--bs-btn-hover-border-color: var(--bs-primary);
-		--bs-btn-active-border-color: var(--bs-primary);
-		--bs-btn-active-bg: var(--bs-primary);
-		--bs-btn-hover-bg: var(--bs-primary);
+		--bs-btn-hover-border-color: var(--bs-white);
+		--bs-btn-active-border-color: var(---bs-white);
+		--bs-btn-active-bg: var(---bs-white);
+		--bs-btn-hover-bg: var(--bs-white);
 		--bs-btn-color: var(--bs-white);
-		--bs-btn-hover-color: var(--bs-white);
-		--bs-btn-active-color: var(--bs-white);
+		--bs-btn-hover-color: var(--bs-dark);
+		--bs-btn-active-color: var(--bs-dark);
 	}
 	&-none {
 		display: inline-flex;
@@ -804,9 +804,9 @@ input {
 	}
 	.btn {
 		&-white {
-			--bs-btn-bg: #161418;
-			--bs-btn-hover-bg: var(--bs-primary);
-			--bs-btn-active-bg: var(--bs-btn-hover-bg);
+			--bs-btn-bg: var(--bs-primary);
+			--bs-btn-hover-bg: #161418;
+			--bs-btn-active-bg: #161418;
 			--bs-btn-color: var(--bs-white);
 			--bs-btn-hover-color: var(--bs-white);
 			--bs-btn-active-color: var(--bs-btn-hover-color);
