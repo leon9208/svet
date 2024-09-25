@@ -121,8 +121,25 @@
 		}
 	}
 	&.isactive {
+		.checkout-step__price,
 		.checkout-step__body {
-			display: flex;
+			display: flex !important;
+		}
+	}
+	&.isvalid {
+		.checkout-step-hiden {
+			display: block !important;
+		}
+		.checkout-step__text,
+		.checkout-step__change {
+			display: flex !important;
+		}
+		&.isactive {
+			.checkout-step__text,
+			.checkout-step-hiden,
+			.checkout-step__change {
+				display: none !important;
+			}
 		}
 	}
 	&__headline {
@@ -164,7 +181,6 @@
 	&__title {
 		font-size: 16px;
 		margin: 0;
-		margin-bottom: 12px;
 		padding-top: 2px;
 		@include from-sm() {
 			padding-top: 0;
@@ -174,9 +190,16 @@
 	&__text {
 		color: #C6C6C6;
 		font-size: 12px;
-		// margin: 12px 0 0 0;
-		// @include from-sm() {
-		// 	margin: 20px 0 0 0;
-		// }
+		margin: 12px 0 0 0;
+		display: none;
+	}
+	&__change {
+		display: none !important;
+	}
+	&-hiden {
+		display: none !important;
+	}
+	&__price {
+		display: none !important;
 	}
 }

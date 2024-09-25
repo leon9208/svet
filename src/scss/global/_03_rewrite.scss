@@ -631,10 +631,6 @@ input {
 		&-next {
 			background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.99995 6.30933L18.219 12.8046L6.99995 19.2998' stroke='%23C6C6C6' stroke-width='2'/%3E%3C/svg%3E%0A");
 		}
-		&-disabled {
-			background-color: #4A494D;
-			opacity: 1 !important;
-		}
 	}
 }
 
@@ -841,10 +837,6 @@ input {
 			}
 			&-next {
 				background-image: var(--btn-icon-next);
-			}
-			&-disabled {
-				background-color: #4A494D;
-				opacity: 1 !important;
 			}
 		}
 	}

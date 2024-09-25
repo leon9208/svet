@@ -82,8 +82,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
-					<div class="cart-checkout__steps">
-						<div class="checkout-step page-block">
+					<form class="cart-checkout__steps">
+						<!-- step-1  -->
+						<div class="checkout-step page-block isactive">
 							<div class="checkout-step__head">
 								<div class="row row-gap-4">
 									<div class="col">
@@ -94,17 +95,8 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-12 col-sm-auto">
-										<button class="btn btn-white btn-xs ms-auto w-100" type="button">Изменить данные</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="checkout-step page-block isactive">
-							<div class="checkout-step__head">
-								<div class="checkout-step__headline" data-count="1">
-									<div>
-										<h2 class="checkout-step__title">Контактные данные получателя</h2>
+									<div class="col-12 col-sm-auto checkout-step-hiden">
+										<button class="btn btn-white btn-xs ms-auto w-100 checkout-step__change" type="button">Изменить данные</button>
 									</div>
 								</div>
 							</div>
@@ -112,32 +104,33 @@
 								<div class="row form-wrap">
 									<div class="col-md-6">
 										<label class="w-100">
-											<input type="text" class="form-control is-invalid" placeholder="Имя">
+											<input type="text" class="form-control is-invalid" name="first_name" placeholder="Имя" required>
 											<div class="form-message">Error message</div>
 										</label>
 									</div>
 									<div class="col-md-6">
 										<label class="w-100">
-											<input type="text" class="form-control" placeholder="Фамилия">
+											<input type="text" class="form-control" name="last_name" placeholder="Фамилия" required>
 											<div class="form-message d-none">Error message</div>
 										</label>
 									</div>
 									<div class="col-md-6">
 										<label class="w-100">
-											<input type="email" class="form-control" placeholder="E-mail">
+											<input type="email" class="form-control" name="email"  placeholder="E-mail" required>
 											<div class="form-message d-none">Error message</div>
 										</label>
 									</div>
 									<div class="col-md-6">
 										<label class="w-100">
-											<input type="tel" class="form-control" placeholder="Номер телефона">
+											<input type="tel" class="form-control" name="phone" placeholder="Номер телефона" required>
 											<div class="form-message d-none">Error message</div>
 										</label>
 									</div>
 								</div>
-								<button class="btn btn-white w-100 w-sm-auto" type="button">Продолжить</button>
+								<button class="btn btn-white w-100 w-sm-auto checkout-step__btn" type="button">Продолжить</button>
 							</div>
 						</div>
+						<!-- step-2  -->
 						<div class="checkout-step page-block">
 							<div class="checkout-step__head">
 								<div class="row row-gap-4">
@@ -145,21 +138,12 @@
 										<div class="checkout-step__headline" data-count="2">
 											<div>
 												<h2 class="checkout-step__title">Адрес доставки</h2>
-												<p class="checkout-step__text">г. Москва, ул. Монахова, дом 12, подъезд 2, этаж 1, квартира 12, домофон 1212 </p>
+												<p class="checkout-step__text">Светлана Иванова, skskks@gmail.com, +7 (977) 000-00-00 </p>
 											</div>
 										</div>
 									</div>
-									<div class="col-12 col-sm-auto">
-										<button class="btn btn-white btn-xs ms-auto w-100" type="button">Изменить данные</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="checkout-step page-block isactive">
-							<div class="checkout-step__head">
-								<div class="checkout-step__headline" data-count="2">
-									<div>
-										<h2 class="checkout-step__title">Адрес доставки</h2>
+									<div class="col-12 col-sm-auto checkout-step-hiden">
+										<button class="btn btn-white btn-xs ms-auto w-100 checkout-step__change" type="button">Изменить данные</button>
 									</div>
 								</div>
 							</div>
@@ -167,83 +151,66 @@
 								<div class="row form-wrap">
 									<div class="col-md-6">
 										<label class="w-100">
-											<input type="text" class="form-control is-invalid" placeholder="Город">
+											<input type="text" class="form-control is-invalid" name="city" placeholder="Город" required>
 											<div class="form-message">Error message</div>
 										</label>
 									</div>
 									<div class="col-md-6">
 										<label class="w-100">
-											<input type="text" class="form-control" placeholder="Улица">
+											<input type="text" class="form-control" name="street" placeholder="Улица" required>
 											<div class="form-message d-none">Error message</div>
 										</label>
 									</div>
 									<div class="col-6">
 										<label class="w-100">
-											<input type="text" class="form-control" placeholder="Дом">
+											<input type="text" class="form-control" name="house" placeholder="Дом" required>
 											<div class="form-message d-none">Error message</div>
 										</label>
 									</div>
 									<div class="col-6">
 										<label class="w-100">
-											<input type="text" class="form-control" placeholder="Подъезд">
+											<input type="text" class="form-control" name="lobby" placeholder="Подъезд">
 											<div class="form-message d-none">Error message</div>
 										</label>
 									</div>
 									<div class="col-6 col-md-4">
 										<label class="w-100">
-											<input type="text" class="form-control" placeholder="Квартира/ офис">
+											<input type="text" class="form-control" name="flat" placeholder="Квартира/ офис" required>
 											<div class="form-message d-none">Error message</div>
 										</label>
 									</div>
 									<div class="col-6 col-md-4">
 										<label class="w-100">
-											<input type="text" class="form-control" placeholder="Этаж">
+											<input type="text" class="form-control" name="floor" placeholder="Этаж">
 											<div class="form-message d-none">Error message</div>
 										</label>
 									</div>
 									<div class="col-md-4">
 										<label class="w-100">
-											<input type="text" class="form-control" placeholder="Домофон">
+											<input type="text" class="form-control" name="Intercom" placeholder="Домофон">
 											<div class="form-message d-none">Error message</div>
 										</label>
 									</div>
 									<div class="col-12">
 										<label class="w-100">
-											<input type="text" class="form-control" placeholder="Комментарий к заказу">
+											<input type="text" class="form-control" name="order_comment" placeholder="Комментарий к заказу">
 											<div class="form-message d-none">Error message</div>
 										</label>
 									</div>
 								</div>
-								<button class="btn btn-white w-100 w-sm-auto" type="button">Продолжить</button>
+								<button class="btn btn-white w-100 w-sm-auto checkout-step__btn" type="button">Продолжить</button>
 							</div>
 						</div>
-
-
+						<!-- step 3  -->
 						<div class="checkout-step page-block">
 							<div class="checkout-step__head">
 								<div class="row row-gap-4">
 									<div class="col">
 										<div class="checkout-step__headline" data-count="3">
-											<div>
-												<h2 class="checkout-step__title">Адрес доставки</h2>
-												<div class="fs-7 mb-2">Картой онлайн</div>
-												<p class="checkout-step__text">г. Москва, ул. Монахова, дом 12, подъезд 2, этаж 1, квартира 12, домофон 1212 </p>
-												<img src="img/payment-cards.webp" alt="">
-											</div>
+											<h2 class="checkout-step__title">Оплата</h2>
+											<div class="text-gray fs-6 fs-sm-5 ms-auto ms-md-0 checkout-step__price">7 900 ₽</div>
 										</div>
 									</div>
-									<div class="col-12 col-sm-auto">
-										<button class="btn btn-white btn-xs ms-auto w-100" type="button">Оформить заказ</button>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="checkout-step page-block isactive">
-							<div class="checkout-step__head">
-								<div class="checkout-step__headline align-content-center" data-count="3">
-									<h2 class="checkout-step__title m-0">Оплата</h2>
-									<div class="text-gray fs-6 fs-sm-5 ms-auto ms-md-0">7 900 ₽</div>
 								</div>
 							</div>
 							<div class="checkout-step__body">
@@ -252,12 +219,10 @@
 									<p class="text-gray">Доступна для карт, зарегистрированных в РФ и странах СНГ.</p>
 									<img src="img/payment-cards.webp" alt="">
 								</div>
-								<button class="btn btn-white w-100 w-sm-auto" type="button">Оформить заказ</button>
+								<button class="btn btn-white w-100 w-sm-auto" type="submit">Оформить заказ</button>
 							</div>
 						</div>
-
-						
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
