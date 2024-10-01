@@ -390,15 +390,18 @@ if(videoBtns.length > 0) {
 	});
 }
 
-// Add event listener for when the modal is opened
-document.getElementById('modalVideo').addEventListener('shown.bs.modal', () => {
-	document.getElementById('video').src = videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0";
-});
+var modalVideo = document.getElementById('modalVideo');
+if (modalVideo != null) {
+	// Add event listener for when the modal is opened
+	modalVideo.addEventListener('shown.bs.modal', () => {
+		document.getElementById('video').src = videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0";
+	});
 
-// Add event listener for when the modal is closed
-document.getElementById('modalVideo').addEventListener('hide.bs.modal', () => {
-	document.getElementById('video').src = videoSrc;
-});
+	// Add event listener for when the modal is closed
+	modalVideo.addEventListener('hide.bs.modal', () => {
+		document.getElementById('video').src = videoSrc;
+	});
+}
 
 
 //gamer options tab
