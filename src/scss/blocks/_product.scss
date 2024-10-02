@@ -129,13 +129,13 @@
 					opacity: 0;
 					visibility: hidden;
 					background-size: cover;
-					background-position: center center;
+					background-position: center;
 				}
 				&__back {
 					opacity: 1;
 					visibility: visible;
 					background-size: cover;
-					background-position: center center;
+					background-position: center;
 				}
 			}
 		}
@@ -326,7 +326,7 @@
 				width: 100%;
 			}
 			background-size: cover;
-			background-position: center center;
+			background-position: center;
 		}
 		&__back {
 			opacity: 0;
