@@ -14,6 +14,12 @@ const concat = require('gulp-concat');
 const map = require('gulp-sourcemaps');
 const chalk = require('chalk');
 
+try {
+	var f = require('../.prod_build');
+	laravelDir = '../public/assets/js/'
+} catch (error) {
+	laravelDir = 'build/js/'
+}
 module.exports = function libs_js(done) {
 	if (plugins.length > 0)
 		return src(plugins)
@@ -22,6 +28,7 @@ module.exports = function libs_js(done) {
 			.pipe(concat('libs.min.js'))
 			// .pipe(map.write('../sourcemaps'))
 			.pipe(dest('build/js/'))
+			.pipe(dest(laravelDir))
 	else {
 		return done(console.log(chalk.bgYellow(`${chalk.bold('WARNING!')} You did not add any JavaScript plugins.`)));
 	}

@@ -323,12 +323,12 @@
 			width: 100%;
 			transition: .25s ease;
 			pointer-events: none;
+			background-size: cover;
+			background-position: center;
 			picture, img {
 				height: 100%;
 				width: 100%;
 			}
-			background-size: cover;
-			background-position: center;
 		}
 		&__back {
 			opacity: 0;

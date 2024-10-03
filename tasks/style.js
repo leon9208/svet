@@ -9,6 +9,15 @@ const clean = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const map = require('gulp-sourcemaps');
 const bs = require('browser-sync');
+const chalk = require("chalk");
+const ftpSettings = require("./ftp_settings.json");
+
+try {
+  var f = require('../.prod_build');
+  laravelDir = '../public/assets/css/'
+} catch (error) {
+  laravelDir = 'build/css/'
+}
 
 module.exports = function style() {
   return src('src/scss/**/*.scss')
@@ -34,6 +43,9 @@ module.exports = function style() {
     }))
     .pipe(concat('style.min.css'))
     // .pipe(map.write('../sourcemaps/'))
+      .pipe(dest(laravelDir))
     .pipe(dest('build/css/'))
+
     .pipe(bs.stream())
+    .on('end', () => console.log(laravelDir))
 }
