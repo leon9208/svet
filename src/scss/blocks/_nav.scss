@@ -24,11 +24,12 @@
 			transform-origin: center;
 			background-color: var(--bs-body-color);
 			transform-origin: center;
+			transition: .25s ease;
 		}
 		&.active {
 			span {
-				&:nth-child(1) { transform: rotate(45deg); top: unset;}
-				&:nth-child(3) { transform: rotate(-45deg); }
+				&:nth-child(1) { transform: rotate(45deg); top: unset; bottom: 16px;}
+				&:nth-child(3) { transform: rotate(-45deg); bottom: 16px;}
 				&:nth-child(2) { display: none; bottom: unset;}
 			}
 		}
@@ -109,6 +110,8 @@
 		transform: translateY(-50%);
 		background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3.48047' y='4' width='1' height='13' transform='rotate(-45 3.48047 4)' fill='white'/%3E%3Crect x='12.4805' y='3' width='1' height='13' transform='rotate(45 12.4805 3)' fill='white'/%3E%3C/svg%3E%0A");
 		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right;
 	}
 }
 

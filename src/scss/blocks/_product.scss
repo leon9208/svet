@@ -220,7 +220,7 @@
 		color: var(--bs-white);
 		border: 1px solid var(--bs-primary);
 		z-index: 1;
-		height: 43px;
+		height: 30px;
 		&__icon {
 			display: none;
 		}
@@ -253,6 +253,7 @@
 		transition: .25s ease;
 		color: var(--bs-white);
 		line-height: 1;
+		padding: 0;
 		@include from-sm() {
 			background-size: 24px;
 			height: 42px;
@@ -278,6 +279,7 @@
 		aspect-ratio: 1 / 1.3;
 		border: 1px solid transparent;
 		transition: .25s ease;
+		min-height: 220px;
 		@include from-sm() {
 			aspect-ratio: 1 / 1.6;
 			margin-bottom: 20px;
@@ -405,6 +407,12 @@
 			margin-bottom: 24px;
 			@include from-sm() {
 				margin-bottom: 50px;
+			}
+		}
+		&:last-child {
+			margin-bottom: 24px;
+			@include from-sm() {
+				margin-bottom: 0;
 			}
 		}
 		&__list {

@@ -341,7 +341,7 @@ $(window).on('scroll', function() {
 		percentage = 0;
 	}
 
-	if(percentage > 55) {
+	if(percentage > 55 || scrollTop < 0) {
 		percentage = 55;
 	}
 
