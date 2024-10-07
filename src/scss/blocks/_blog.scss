@@ -36,6 +36,9 @@
 			border: 0;
 			padding: 0 16px;
 			user-select: none;
+			text-decoration: none;
+			display: inline-flex;
+			align-items: center;
 			&.active {
 				background-color: var(--bs-primary);
 			}

@@ -755,7 +755,7 @@ input {
 .pagination {
 	display: flex;
 	gap: 10px;
-	a, button {
+	a, button, span {
 		border-radius: 10px;
 		border: 0;
 		height: 40px;
@@ -777,10 +777,21 @@ input {
 	}
 	&-link {
 		background-color: #fff;
+		&.active {
+			color: var(--bs-white);
+			background-color: var(--bs-primary);
+		}
 	}
 	&-btn {
 		background-color: var(--bs-dark-bg-subtle);
 		color: var(--bs-white);
+		&.disabled {
+			opacity: .5;
+			&:hover {
+				background-color: var(--bs-dark-bg-subtle);
+				color: var(--bs-white);
+			}
+		}
 	}
 }
 
@@ -803,7 +814,9 @@ input {
 [aria-expanded="false"] svg {
 	color: var(--bs-body-color);
 }
-
+.cart-light {
+	display: none;
+}
 [data-theme="light"] {
 	.btn-close {
 		--bs-btn-close-white-filter: unset;
@@ -876,5 +889,13 @@ input {
 	}
 	.product-price {
 		color: var(--bs-dark-bg-subtle);
+	}
+	.header-cart {
+		.cart-light {
+			display: block;
+		}
+		.cart-dark {
+			display: none;
+		}
 	}
 }
