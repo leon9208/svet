@@ -228,6 +228,12 @@ input {
 			background-color: var(--bs-form-bg-focus);
 			box-shadow: unset;
 		}
+		&:disabled {
+			opacity: .5;
+			background-color: transparent;
+			cursor: not-allowed;
+			pointer-events: all !important;
+		}
 		&.is-invalid {
 			padding-right: var(--bs-input-padding-x);
 			background-color: var(--bs-form-invalid-bg-color);
