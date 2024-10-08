@@ -482,11 +482,14 @@ input {
 	svg {
 		width: 20px;
 		height: 20px;
-		-webkit-animation-name:             rotate;
-		-webkit-animation-duration:         0.5s;
-		-webkit-animation-iteration-count:  infinite;
-		-webkit-transition-timing-function: linear;
+		&.loading {
+			-webkit-animation-name:             rotate;
+			-webkit-animation-duration:         0.5s;
+			-webkit-animation-iteration-count:  infinite;
+			-webkit-transition-timing-function: linear;
+		}
 	}
+
 }
 
 @-webkit-keyframes rotate {
