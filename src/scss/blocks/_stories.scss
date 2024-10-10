@@ -37,6 +37,8 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
+		position: relative;
+		z-index: 1;
 		@include from-sm() {
 			box-shadow: 0 0 16px rgba(var(--bs-black-rgb), 0.5);
 			height: 458px;
@@ -46,6 +48,18 @@
 		iframe {
 			width: 100%;
 			height: 100%;
+		}
+		video {
+			width: 100%;
+			height: 100%;
+		}
+		&:before {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
 		}
 	}
 }
