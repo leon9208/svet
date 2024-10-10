@@ -34,6 +34,9 @@
 		border-radius: 12px;
 		background-color: #ccc;
 		box-shadow: 0 0 14px var(--bs-primary);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		@include from-sm() {
 			box-shadow: 0 0 16px rgba(var(--bs-black-rgb), 0.5);
 			height: 458px;
