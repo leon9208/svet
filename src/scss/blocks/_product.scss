@@ -395,6 +395,9 @@
 			p {
 				line-height: inherit;
 				font-size: inherit;
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
