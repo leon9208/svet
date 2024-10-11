@@ -913,3 +913,17 @@ input {
 		}
 	}
 }
+
+.tab {
+	&-pane {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		min-height: 520px;
+		border-radius: 12px;
+		overflow: hidden;
+		@include sm() {
+			min-height: 353px;
+		}
+	}
+}
