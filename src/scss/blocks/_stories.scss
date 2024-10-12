@@ -10,6 +10,7 @@
 				&-visible {
 					opacity: 1;
 				}
+				overflow: visible;
 			}
 			&-pagination {
 				--swiper-pagination-bottom: 0;
@@ -39,6 +40,18 @@
 		justify-content: center;
 		position: relative;
 		z-index: 1;
+		overflow: hidden;
+		.video-js {
+			overflow: hidden;
+			width: 225px;
+			height: 430px!important;
+			border-radius: 12px;
+			@include from-sm() {
+				height: 458px!important;
+				width: 257px;
+				border-radius: 14px;
+			}
+		}
 		@include from-sm() {
 			box-shadow: 0 0 16px rgba(var(--bs-black-rgb), 0.5);
 			height: 458px;
