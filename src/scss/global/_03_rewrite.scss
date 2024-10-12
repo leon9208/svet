@@ -946,8 +946,18 @@ input {
 		&:hover {
 			background-color: rgba(var(--bs-primary-rgb), 0.8);
 		}
+		&:before {
+			display: none;
+			content: '';
+		}
+	}
+	.vjs-seek-to-live-control,.vjs-picture-in-picture-control {
+		display: none;
 	}
 	.vjs-icon-placeholder {
 		display: none;
+	}
+	.vjs-control-bar {
+		background: #000000;
 	}
 }
