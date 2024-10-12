@@ -11,6 +11,14 @@
 					opacity: 1;
 				}
 				overflow: visible;
+				&-next, &-prev {
+					.stories-item {
+						@include sm() {
+							height: 326px;
+							margin-top: 48px;
+						}
+					}
+				}
 			}
 			&-pagination {
 				--swiper-pagination-bottom: 0;
@@ -41,6 +49,7 @@
 		position: relative;
 		z-index: 1;
 		overflow: hidden;
+		transition: all var(--bs-transition);
 		.video-js {
 			overflow: hidden;
 			width: 225px;
