@@ -101,46 +101,52 @@ $(document).ready(function() {
 		}
 	});
 	
-	var storiesSlider = new Swiper(".stories-slider", {
+	var storiesSlider = new Swiper(".stories-slider .swiper", {
 		effect: "coverflow",
 		grabCursor: true,
 		slidesPerView: 'auto',
 		centeredSlides: true,
 		centerMode: true,
 		loop: true,
-		// freeMode: true,
-		// freeModeMomentumBounce: false,
-		// freeModeMomentumRatio: .1,
-		// freeModeMomentumVelocityRatio: .8,
-		// freeModeSticky: true,
-		// // loopAdditionalSlides: slidesNum, // slidesNum contains the initial slides number
-		// // loopedSlides: slidesNum,
 		initialSlide: 3,
 		navigation: {
-			nextEl: '.stories-slider .swiper-button-next',
-			prevEl: '.stories-slider .swiper-button-prev',
+			nextEl: '.stories .swiper-button-next',
+			prevEl: '.stories .swiper-button-prev',
 		},
 		pagination: {
-			el: '.stories-slider .swiper-pagination',
+			el: '.stories .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
 		},
 		coverflowEffect: {
 			rotate: 0,
-			stretch: 0,
-			depth: 100,
-			modifier: 2,
+			scale: 0.89,
+			stretch: 20,
+			depth: 130,
+			modifier: 1,
 			slideShadows: false,
-			stretch: 0
 		},
 		breakpoints: {
 			0: {
 				pagination: { enabled: true },
 				navigation: { enabled: false },
+				coverflowEffect: {
+					scale: 0.84,
+				}
+			},
+			768: {
+				pagination: { enabled: true },
+				navigation: { enabled: false },
+				coverflowEffect: {
+					scale: 0.89,
+				}
 			},
 			1201: {
 				pagination: { enabled: false },
 				navigation: { enabled: true },
+				coverflowEffect: {
+					scale: 0.89,
+				}
 			}
 		}
 	});

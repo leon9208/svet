@@ -1,9 +1,15 @@
 .stories {
 	&-slider {
-		@include lg() {
-			overflow: unset;
+		@include from-lg() {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			padding: 0 30px;
 		}
-		.swiper{
+		.swiper {
+			@include lg() {
+				overflow: unset;
+			}
 			&-slide {
 				width: auto;
 				opacity: 0;
@@ -24,7 +30,12 @@
 		}
 		.swiper-button-next, .swiper-rtl .swiper-button-prev,
 		.swiper-button-prev, .swiper-rtl .swiper-button-next {
+			flex: none;
+			position: relative;
 			--swiper-navigation-sides-offset: 0;
+			@include lg() {
+				display: none;
+			}
 		}
 		
 	}
