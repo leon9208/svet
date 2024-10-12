@@ -216,7 +216,14 @@
 		color: var(--bs-white);
 		border: 1px solid var(--bs-primary);
 		z-index: 1;
-		height: 43px;
+		height: 30px;
+		@include from-sm() {
+			font-weight: 400;
+			font-size: 16px;
+			top: 15px;
+			left: 15px;
+			height: 43px;
+		}
 		&__icon {
 			display: none;
 		}
@@ -233,6 +240,8 @@
 	}
 	&-btn {
 		position: absolute;
+		padding: 0;
+		flex: none;
 		top: 8px;
 		right: 8px;
 		border-radius: 6px;
@@ -250,7 +259,6 @@
 		color: var(--bs-white);
 		line-height: 1;
 		@include from-sm() {
-			background-size: 24px;
 			height: 42px;
 			width: 42px;
 			border-radius: 10px;
