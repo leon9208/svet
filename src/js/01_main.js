@@ -345,8 +345,6 @@ $(window).on('scroll', function() {
 		percentage = 55;
 	}
 
-	$('.alert__content').html(scrollTop + ' ' +percentage + ' '+newRadiusOuter);
-
 	if ($(window).width() <= 1024) {
 		$('.hero-mask').css('background', `radial-gradient(500px 300px at 50% 46%,  rgba(0,0,0,${percentage}%)  0%, rgba(0,0,0,1) ${newRadiusOuter}%)`);
 	}
